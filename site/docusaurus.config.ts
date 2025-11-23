@@ -77,11 +77,6 @@ const config: Config = {
           label: "Internal Docs",
         },
         {
-          to: "workshops",
-          position: "left",
-          label: "Workshops",
-        },
-        {
           type: "localeDropdown",
           position: "right",
         },
