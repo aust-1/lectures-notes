@@ -32,8 +32,7 @@ const config: Config = {
         docs: {
           sidebarPath: "./sidebars.ts",
           routeBasePath: "/",
-          editUrl:
-            "https://github.com/DeVinci-FabLab/documentation/tree/main/site/",
+          editUrl: "https://github.com/aust-1/lectures-notes/tree/main/site/",
           editLocalizedFiles: true,
           showLastUpdateTime: true,
           remarkPlugins: [remarkMath],
@@ -81,7 +80,7 @@ const config: Config = {
           position: "right",
         },
         {
-          href: "https://github.com/DeVinci-FabLab/documentation/",
+          href: "https://github.com/aust-1/lectures-notes",
           position: "right",
           className: "header-github-link",
         },
@@ -103,10 +102,6 @@ const config: Config = {
             {
               label: "LinkedIn",
               href: "https://www.linkedin.com/in/eliott-roussille/",
-            },
-            {
-              label: "Instagram",
-              href: "https://www.instagram.com/eliott.roussille/",
             },
             {
               label: "GitHub",
@@ -144,26 +139,6 @@ const config: Config = {
       ],
     },
   } satisfies Preset.ThemeConfig,
-  plugins: [
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "internal",
-        path: "internal-docs",
-        routeBasePath: "internal-documentation",
-        sidebarPath: "./sidebarsInternal.ts",
-        remarkPlugins: [remarkMath],
-        rehypePlugins: [rehypeKatex],
-        editUrl:
-          "https://github.com/DeVinci-FabLab/documentation/tree/main/site/",
-        editLocalizedFiles: true,
-        showLastUpdateTime: true,
-      },
-    ],
-    "docusaurus-plugin-sass",
-  ],
 };
 
 export default config;
-
-//TODO: faire une homepage ? [exemple](https://forge.apps.education.fr/eric.autant/squelettedocusaurus/-/blob/main/src/components/HomepageFeatures/index.js?ref_type=heads)

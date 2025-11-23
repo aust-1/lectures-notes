@@ -2,7 +2,7 @@
 title: Writing Math in LaTeX
 description: This course material presents the basics of LaTeX for writing mathematical expressions, along with tips for efficiency using snippets in VS Code and Obsidian.
 slug: latex
-tags: [course, info, latex]
+tags: [course, it, latex]
 last_update:
   date: 2025-11-05
   author: Eliott A. Roussille

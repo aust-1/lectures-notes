@@ -2,7 +2,7 @@
 title: Écrire des maths en LaTeX
 description: Ce support de cours présente les bases de LaTeX pour rédiger des expressions mathématiques, ainsi que des astuces pour gagner en efficacité avec des snippets dans VS Code et Obsidian.
 slug: latex
-tags: [course, info, latex]
+tags: [course, it, latex]
 last_update:
   date: 2025-11-05
   author: Eliott A. Roussille

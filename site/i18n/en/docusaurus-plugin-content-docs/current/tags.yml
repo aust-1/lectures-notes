@@ -34,7 +34,7 @@ fabrication:
   permalink: '/fabrication'
   description: 'Docs related to fabrication techniques and tools'
 
-info:
+it:
   label: 'Info'
   permalink: '/info'
   description: 'Docs related to informatics and technology'

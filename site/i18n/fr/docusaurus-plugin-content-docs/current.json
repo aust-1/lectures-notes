@@ -14,5 +14,21 @@
   "sidebar.tutorialSidebar.category.Spaces Charters": {
     "message": "Chartes des Espaces",
     "description": "The label for category 'Spaces Charters' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Maths": {
+    "message": "Mathématiques",
+    "description": "The label for category 'Maths' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Engineering Science": {
+    "message": "Sciences de l'ingénieur",
+    "description": "The label for category 'Engineering Science' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.IT": {
+    "message": "Informatique",
+    "description": "The label for category 'IT' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Learning materials": {
+    "message": "Matériel d'apprentissage d'informatique",
+    "description": "The label for category 'Learning materials' in sidebar 'tutorialSidebar'"
   }
 }

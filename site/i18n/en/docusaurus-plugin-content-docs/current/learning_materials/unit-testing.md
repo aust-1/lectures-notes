@@ -2,7 +2,7 @@
 title: Unit Testing (Examples in C# with MSTest)
 description: A guide to understanding the fundamentals of unit testing, illustrated in C# with MSTest, but applicable to all languages.
 slug: unit-testing
-tags: [course, info, csharp]
+tags: [course, it, csharp]
 last_update:
   date: 2025-07-03
   author: Eliott A. Roussille
@@ -37,10 +37,10 @@ This guide presents the fundamental concepts of unit testing, illustrated with M
 
 ### Required tools
 
-| Tool     | Version | Description                                 |
-| -------- | ------- | ------------------------------------------- |
-| .NET SDK | 6.0+    | C# development framework                    |
-| IDE      | -       | Visual Studio, VS Code or JetBrains Rider   |
+| Tool     | Version | Description                               |
+| -------- | ------- | ----------------------------------------- |
+| .NET SDK | 6.0+    | C# development framework                  |
+| IDE      | -       | Visual Studio, VS Code or JetBrains Rider |
 
 ## Creating and configuring an MSTest test project
 
