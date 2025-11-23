@@ -1,14 +1,10 @@
 {
   "logo.alt": {
-    "message": "DVFL logo",
+    "message": "Austin's Course Notes Logo",
     "description": "The alt text of navbar logo"
   },
   "item.label.Documentation": {
     "message": "Documentation",
     "description": "Navbar item with label Documentation"
-  },
-  "item.label.Internal Docs": {
-    "message": "Documentation Interne",
-    "description": "Navbar item with label Internal Docs"
   }
 }

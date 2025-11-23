@@ -69,13 +69,6 @@ const config: Config = {
           label: "Documentation",
         },
         {
-          type: "docSidebar",
-          sidebarId: "internalSidebar",
-          docsPluginId: "internal",
-          position: "left",
-          label: "Internal Docs",
-        },
-        {
           type: "localeDropdown",
           position: "right",
         },

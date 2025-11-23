@@ -15,7 +15,7 @@ last_update:
 - Un mot binaire est un groupe de bits, unité de base manipulée par un calculateur ou un microprocesseur.
 - Physiquement, l'information circule par alternance de tension ou de photons (fibre optique).
 - Chaque élément binaire est représenté par un état physique (signal électrique).
-<img src="/assets/internal_docs/Architecture/Octet visuel.png" alt="Représentation graphique d'un octet" width="520" />
+<img src="/assets/docs/Architecture/Octet visuel.png" alt="Représentation graphique d'un octet" width="520" />
 
 :::note Codage de l'information
 
@@ -32,11 +32,11 @@ $$
 
 #### Conversion entre bases
 
-| Base             | Préfixe | Chiffres utilisés | Exemple    | Schéma de conversion détaillé                                                                                      |
-| ---------------- | ------- | ----------------- | ---------- | ------------------------------------------------------------------------------------------------------------------ |
-| Binaire (2)      | `0b`    | 0, 1              | `0b101101` | <img src="/assets/internal_docs/Architecture/B10-B.png" alt="Conversion binaire" width="300" />                    |
-| Octal (8)        | `0o`    | 0à7               | `0o55`     | <img src="/assets/internal_docs/Architecture/Binaire-Octale.png" alt="Conversion octale" width="300" />            |
-| Hexadécimal (16) | `0x`    | 0à9, AàF          | `0x2D`     | <img src="/assets/internal_docs/Architecture/Binaire-Hexadécimal.png" alt="Conversion hexadécimale" width="300" /> |
+| Base             | Préfixe | Chiffres utilisés | Exemple    | Schéma de conversion détaillé                                                                             |
+| ---------------- | ------- | ----------------- | ---------- | --------------------------------------------------------------------------------------------------------- |
+| Binaire (2)      | `0b`    | 0, 1              | `0b101101` | <img src="/assets/docs/Architecture/B10-B.png" alt="Conversion binaire" width="300" />                    |
+| Octal (8)        | `0o`    | 0à7               | `0o55`     | <img src="/assets/docs/Architecture/Binaire-Octale.png" alt="Conversion octale" width="300" />            |
+| Hexadécimal (16) | `0x`    | 0à9, AàF          | `0x2D`     | <img src="/assets/docs/Architecture/Binaire-Hexadécimal.png" alt="Conversion hexadécimale" width="300" /> |
 
 #### Représentation et unités
 
@@ -57,38 +57,38 @@ $$
 
 ## Chapitre 2 : Opérations logiques
 
-<img src="/assets/internal_docs/Architecture/Notions fondamentales.png" alt="Notions fondamentales de logique" width="520" />
+<img src="/assets/docs/Architecture/Notions fondamentales.png" alt="Notions fondamentales de logique" width="520" />
 
 ### Tables et diagrammes
 
 - Table de vérité : $2^{\text{nombre de variables}}$ lignes, construite en binaire naturel.
 - Logigramme : représentation graphique des combinaisons logiques.
 
-  <img src="/assets/internal_docs/Architecture/Logigramme.png" alt="Exemple de logigramme" width="400" />
+  <img src="/assets/docs/Architecture/Logigramme.png" alt="Exemple de logigramme" width="400" />
 - Chronogramme : évolution temporelle des variables logiques.
 
-  <img src="/assets/internal_docs/Architecture/Chronogramme.png" alt="Exemple de chronogramme" width="400" />
+  <img src="/assets/docs/Architecture/Chronogramme.png" alt="Exemple de chronogramme" width="400" />
 
 ### Opérateurs logiques de base
 
-| Porte     | Illustration                                                                                              |
-| --------- | --------------------------------------------------------------------------------------------------------- |
-| NON (NOT) | <img src="/assets/internal_docs/Architecture/NON ou NOT.png" alt="Porte NON" width="520" />               |
-| ET (AND)  | <img src="/assets/internal_docs/Architecture/ET ou AND.png" alt="Porte ET" width="520" />                 |
-| OU (OR)   | <img src="/assets/internal_docs/Architecture/OU ou OR.png" alt="Porte OU" width="520" />                  |
-| NAND      | <img src="/assets/internal_docs/Architecture/NON-ET ou NAND.png" alt="Porte NAND" width="520" />          |
-| NOR       | <img src="/assets/internal_docs/Architecture/NON-OU ou NOR.png" alt="Porte NOR" width="520" />            |
-| XOR       | <img src="/assets/internal_docs/Architecture/OU exclusif ou XOR.png" alt="Porte XOR" width="520" />       |
-| XNOR      | <img src="/assets/internal_docs/Architecture/NON-OU exclusif ou EXOR.png" alt="Porte XNOR" width="520" /> |
+| Porte     | Illustration                                                                                     |
+| --------- | ------------------------------------------------------------------------------------------------ |
+| NON (NOT) | <img src="/assets/docs/Architecture/NON ou NOT.png" alt="Porte NON" width="520" />               |
+| ET (AND)  | <img src="/assets/docs/Architecture/ET ou AND.png" alt="Porte ET" width="520" />                 |
+| OU (OR)   | <img src="/assets/docs/Architecture/OU ou OR.png" alt="Porte OU" width="520" />                  |
+| NAND      | <img src="/assets/docs/Architecture/NON-ET ou NAND.png" alt="Porte NAND" width="520" />          |
+| NOR       | <img src="/assets/docs/Architecture/NON-OU ou NOR.png" alt="Porte NOR" width="520" />            |
+| XOR       | <img src="/assets/docs/Architecture/OU exclusif ou XOR.png" alt="Porte XOR" width="520" />       |
+| XNOR      | <img src="/assets/docs/Architecture/NON-OU exclusif ou EXOR.png" alt="Porte XNOR" width="520" /> |
 
 #### Théorèmes de De Morgan
 
 - Complément d'un produit : somme des compléments.
 
-  <img src="/assets/internal_docs/Architecture/Morgan1.png" alt="Théorème de De Morgan 1" width="180" />
+  <img src="/assets/docs/Architecture/Morgan1.png" alt="Théorème de De Morgan 1" width="180" />
 - Complément d'une somme : produit des compléments.
 
-  <img src="/assets/internal_docs/Architecture/Morgan2.png" alt="Théorème de De Morgan 2" width="180" />
+  <img src="/assets/docs/Architecture/Morgan2.png" alt="Théorème de De Morgan 2" width="180" />
 
 #### Opérateurs logiques en C
 
@@ -99,7 +99,7 @@ $$
 - `x << y` : décalage de $x$ de $y$ bits vers la gauche ($x \times base^y$)
 - `x >> y` : décalage de $x$ de $y$ bits vers la droite ($x // base^y$)
 
-<img src="/assets/internal_docs/Architecture/Opérations bit à bit.png" alt="Exemple d'opérations bit à bit" width="520" />
+<img src="/assets/docs/Architecture/Opérations bit à bit.png" alt="Exemple d'opérations bit à bit" width="520" />
 
 :::tip
 Pour mettre le bit 3 à 1 : `xxxx xxxx | 0000 1000 = xxxx 1xxx`
@@ -124,13 +124,13 @@ Chaque porte possède ses performances propres (temps de montée/descente, temps
 - Les portes se placent entre les blocs, au-dessus du ravin.
 - Les LED ont une borne + (patte longue) et nécessitent une résistance $< 1 k\Omega$ côté cathode.
 
-<img src="/assets/internal_docs/Architecture/Code couleur résistances.png" alt="Code couleur des résistances" width="360" />
+<img src="/assets/docs/Architecture/Code couleur résistances.png" alt="Code couleur des résistances" width="360" />
 
 ## Chapitre 4 : Logique séquentielle
 
 En logique séquentielle, l'état précédent est mémorisé via des bascules : la sortie dépend donc de l'état précédent et/ou de l'horloge.
 
-<img src="/assets/internal_docs/Architecture/Logique séquentielle.png" alt="Principe de la logique séquentielle" width="520" />
+<img src="/assets/docs/Architecture/Logique séquentielle.png" alt="Principe de la logique séquentielle" width="520" />
 
 ### Horloge
 
@@ -160,7 +160,7 @@ $$
 Q = \overline {R + \overline Q} \quad ; \quad \overline Q = \overline {S + Q}
 $$
 
-<img src="/assets/internal_docs/Architecture/Bascule RS nor.png" alt="Bascule RS avec des NOR" width="520" />
+<img src="/assets/docs/Architecture/Bascule RS nor.png" alt="Bascule RS avec des NOR" width="520" />
 
 #### Bascule RS avec des NAND
 
@@ -174,14 +174,14 @@ $$
 Q = \overline {\overline R \cdot \overline Q} \quad ; \quad \overline Q = \overline {\overline S \cdot Q}
 $$
 
-<img src="/assets/internal_docs/Architecture/Bascule RS nand.png" alt="Bascule RS avec des NAND" width="520" />
+<img src="/assets/docs/Architecture/Bascule RS nand.png" alt="Bascule RS avec des NAND" width="520" />
 
 #### Bascule D (Data ou Delay)
 
 - Une seule entrée `D` (Data) copiée sur $Q$ lors du front actif de l'horloge.
 - Si `D=1` alors $Q=1$ ; si `D=0` alors $Q=0$.
 
-<img src="/assets/internal_docs/Architecture/Bascule D.png" alt="Bascule D" width="520" />
+<img src="/assets/docs/Architecture/Bascule D.png" alt="Bascule D" width="520" />
 
 ### Registres
 
@@ -193,7 +193,7 @@ $$
 - Stocke une valeur binaire sur $n$ bits.
 - Les données d'entrée `D0` à `Dn-1` sont transférées aux sorties `Q0` à `Qn-1` lors du front actif de l'horloge.
 
-<img src="/assets/internal_docs/Architecture/registre de mémorisation.png" alt="Registre de mémorisation" width="520" />
+<img src="/assets/docs/Architecture/registre de mémorisation.png" alt="Registre de mémorisation" width="520" />
 
 #### Registre de décalage
 
@@ -202,7 +202,7 @@ $$
 - Entrée `SI` (Serial In) pour le bit entrant et sortie `SO` (Serial Out) pour le bit sortant.
 
 Exemple de décalage à droite :
-<img src="/assets/internal_docs/Architecture/registre de décalage.png" alt="Registre de décalage" width="520" />
+<img src="/assets/docs/Architecture/registre de décalage.png" alt="Registre de décalage" width="520" />
 
 ### Compteurs / Décompteurs
 
@@ -210,7 +210,7 @@ Exemple de décalage à droite :
 - On peut cumuler plusieurs diviseur de fréquence pour diviser par 4, 8, 16 etc. Pour cela on relie la sortie $Q$ du premier diviseur à l'horloge du second, et ainsi de suite.
 
 Exemple : diviseur de fréquence par 2
-<img src="/assets/internal_docs/Architecture/diviseur de fréquence 2.png" alt="Diviseur de fréquence par 2" width="520" />
+<img src="/assets/docs/Architecture/diviseur de fréquence 2.png" alt="Diviseur de fréquence par 2" width="520" />
 
 ## Chapitre 5 : Microcontrôleur AVR
 

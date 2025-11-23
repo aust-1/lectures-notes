@@ -11,9 +11,9 @@ last_update:
 ## Chapitre 1 : Lois fondamentales
 
 - **Loi des mailles** : le long d’une maille, la somme algébrique des tensions est nulle, $U_{AA} = 0\ \text{V}$.
-  <img src="/assets/internal_docs/Electricité/Lois des mailles.png" alt="Loi des mailles" width="380" />
+  <img src="/assets/docs/Electricité/Lois des mailles.png" alt="Loi des mailles" width="380" />
 - **Loi des nœuds** : en chaque nœud, la somme des intensités arrivant est égale à la somme des intensités partant.
-  <img src="/assets/internal_docs/Electricité/Loi des noeuds.png" alt="Loi des nœuds" width="380" />
+  <img src="/assets/docs/Electricité/Loi des noeuds.png" alt="Loi des nœuds" width="380" />
 - **Loi d’Ohm** : $U = R \times I$
 
 :::note
@@ -50,27 +50,27 @@ last_update:
 
 > **Point de fonctionnement** : couple $(U, I)$ du montage en régime établi.\
 > **Montage équivalent** : dipôle unique produisant le même point de fonctionnement.
-> <img src="/assets/internal_docs/Electricité/Modèle équivalent Thévenin et Norton.png" alt="Modèle équivalent" width="420" />
+> <img src="/assets/docs/Electricité/Modèle équivalent Thévenin et Norton.png" alt="Modèle équivalent" width="420" />
 
 ### Thévenin (MET)
 
 - $E_\text{th}$ : tension à vide (f.e.m.) entre $A$ et $B$ ($I = 0$).
 - $R_\text{th}$ : résistance équivalente en neutralisant les sources indépendantes.
 
-  <img src="/assets/internal_docs/Electricité/Thévenin.png" alt="Théorème de Thévenin" width="420" />
+  <img src="/assets/docs/Electricité/Thévenin.png" alt="Théorème de Thévenin" width="420" />
 
 ### Norton (MEN)
 
 - $I_n$ : courant de court-circuit entre $A$ et $B$.
 - $R_n = R_\text{th}$.
 
-  <img src="/assets/internal_docs/Electricité/Norton.png" alt="Théorème de Norton" width="420" />
+  <img src="/assets/docs/Electricité/Norton.png" alt="Théorème de Norton" width="420" />
 
 ### Superposition
 
 Le courant dans une branche est la somme des courants obtenus quand on active un seul générateur à la fois (les autres neutralisés). Il y a donc autant de montages à analyser qu'il y a de générateurs.
 
-<img src="/assets/internal_docs/Electricité/Superposition.png" alt="Théorème de superposition" width="550" />
+<img src="/assets/docs/Electricité/Superposition.png" alt="Théorème de superposition" width="550" />
 
 ### Millman
 
@@ -78,11 +78,11 @@ Dans un montage de branches en dérivation, la tension aux bornes de ces branche
 $$
 U_{AM} = \frac{\displaystyle\sum_{i=1}^n \frac{E_i}{R_i}}{\displaystyle\sum_{i=1}^n \frac{1}{R_i}}
 $$
-<img src="/assets/internal_docs/Electricité/Millman.png" alt="Théorème de Millman" width="420" />
+<img src="/assets/docs/Electricité/Millman.png" alt="Théorème de Millman" width="420" />
 
 ## Chapitre 5 : Méthodes de résolution
 
-<img src="/assets/internal_docs/Electricité/Equivalence connexion.png" alt="Équivalences de connexion" width="500" />
+<img src="/assets/docs/Electricité/Equivalence connexion.png" alt="Équivalences de connexion" width="500" />
 
 ### Loi des nœuds indépendants (méthode des potentiels de nœuds)
 
@@ -122,7 +122,7 @@ Temps caractéristique $\tau = RC$.
 
 - **Charge** : $u_C(t) = E \big(1 - e^{-t/\tau}\big)$
 
-  <img src="/assets/internal_docs/Electricité/RC en charge.png" alt="RC en charge" width="520" />
+  <img src="/assets/docs/Electricité/RC en charge.png" alt="RC en charge" width="520" />
 - **Décharge** : $u_C(t) = E\, e^{-t/\tau}$
 
-  <img src="/assets/internal_docs/Electricité/RC en décharge.png" alt="RC en décharge" width="520" />
+  <img src="/assets/docs/Electricité/RC en décharge.png" alt="RC en décharge" width="520" />
