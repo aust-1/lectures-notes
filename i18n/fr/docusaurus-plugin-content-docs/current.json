@@ -1,0 +1,18 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.3D Printing": {
+    "message": "Impression 3D",
+    "description": "The label for category '3D Printing' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.IT Courses": {
+    "message": "Formations Informatiques",
+    "description": "The label for category 'IT Courses' in sidebar 'tutorialSidebar'"
+  },
+  "sidebar.tutorialSidebar.category.Spaces Charters": {
+    "message": "Chartes des Espaces",
+    "description": "The label for category 'Spaces Charters' in sidebar 'tutorialSidebar'"
+  }
+}

@@ -2,46 +2,72 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Introduction
 
-Let's discover **Docusaurus in less than 5 minutes**.
+> Cette documentation est un référentiel pour tous les outils disponibles dans le Fablab. Elle est destinée à servir de référence rapide pour les utilisateurs du Fablab.
 
-## Getting Started
+![Outils](/assets/docs/filaments/filament-1.png)
 
-Get started by **creating a new site**.
+:::warning
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Cette documentation est en cours de rédaction. Elle n’est pas exhaustive et peut contenir des erreurs. Si vous avez des questions ou des suggestions, veuillez contacter l’équipe du Fablab.
 
-### What you'll need
+:::
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+:::warning
 
-## Generate a new site
+Travailler dans un Fablab n’est pas une activité sans risque et nécessite du temps pour déterminer quelle protection est adaptée à quelle technique de fabrication. La précipitation et le manque de connaissances seront les principales causes d’accidents.
 
-Generate a new Docusaurus site using the **classic template**.
+Veuillez prendre le temps de lire attentivement le guide suivant avant d’utiliser l’un des outils.
+Si vous avez des doutes ou des questions, veuillez vous référer à votre superviseur.
 
-The classic template will automatically be added to your project after you run the command:
+:::
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+## Matériel électronique
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+- [Imprimante 3D | Bambulab X1 Carbon](/3d_printing/bambulab)
+- Station multifonction | SnapMaker Artisan
+- Ordinateurs monocartes
+  - [RaspberryPi 5](https://www.raspberrypi.com/products/raspberry-pi-5/)
+  - [RaspberryPi 400](https://www.raspberrypi.com/products/raspberry-pi-400/)
+  - [OrangePi 5B](http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/details/Orange-Pi-5B.html)
+  - [OrangePi 5 Plus](http://www.orangepi.org/html/hardWare/computerAndMicrocontrollers/details/Orange-Pi-5-plus.html)
+- Microcontrôleurs
+  - [ESP8266](https://en.wikipedia.org/wiki/ESP8266)
+  - [ESP32 & Featherwing](https://www.adafruit.com/product/4264)
+  - [TotemDuino Micro Lab](https://totemmaker.net/product/totemduino-microlab/)
+- Capteurs
+  - ESP32 Cam
+  - Capteur PIR
+  - Picamera 2 NoIR
+  - Picamera 3
+  - Webcam Full HD
+  - Microphone USB Audio-technica
+  - Haut-parleur et microphone de conférence ASK 130
+  - Haut-parleur EL019
+- Tablettes Samsung
+- Kit de soudure
+- Multimètre
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+## Matériel mécanique
 
-## Start your site
+- Pistolet thermique Seekone
+- Pistolet à colle Bosch
+- Perceuse Bosh
+- Perceuse à main Bosh
+- Ponceuse Black & Decker
 
-Run the development server:
+## Logiciels
 
-```bash
-cd my-website
-npm run start
-```
+- CAO | FreeCAD (en cours)
+- [Trancheuse 3D | OrcaSlicer pour Bambulab](/3d_printing/orcaslicer)
+- Trancheuse 3D | Luban pour Snapmaker (en cours)
+- Éditeur de code : Vscode & PlatformIO (en cours)
+- [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
+- [BalenaEtcher](https://etcher.balena.io/)
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+## Consommables
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+- [Filament | Plastiques FDM](/3d_printing/filament)
+- Planches de bois
+- Feuilles de métal

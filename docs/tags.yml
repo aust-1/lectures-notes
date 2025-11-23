@@ -1,0 +1,80 @@
+3d-printing:
+  label: 'Impression 3D'
+  permalink: '/3d-printing'
+  description: 'Documentation relative aux technologies et pratiques d impression 3D'
+
+
+charter:
+  label: 'Charte'
+  permalink: '/charter'
+  description: 'Documentation relative aux chartes et aux règles de conduite'
+
+course:
+  label: 'Formation'
+  permalink: '/course'
+  description: 'Documentation relative aux formations et cours proposés'
+
+csharp:
+  label: 'C#'
+  permalink: '/csharp'
+  description: 'Documentation relative au langage de programmation C# et à ses applications'
+
+docker:
+  label: 'Docker'
+  permalink: '/docker'
+  description: 'Documentation relative à Docker et aux technologies de conteneurisation'
+
+electronics:
+  label: 'Électronique'
+  permalink: '/electronics'
+  description: 'Documentation relative à l électronique et aux circuits'
+
+fabrication:
+  label: 'Fabrication'
+  permalink: '/fabrication'
+  description: 'Documentation relative aux techniques et outils de fabrication'
+
+info:
+  label: 'Info'
+  permalink: '/info'
+  description: 'Documentation relative à l informatique et à la technologie'
+
+latex:
+  label: 'LaTeX'
+  permalink: '/latex'
+  description: 'Documentation relative au système de composition LaTeX et à ses applications'
+
+resin:
+  label: 'Résine'
+  permalink: '/resin'
+  description: 'Documentation relative aux technologies et pratiques d impression 3D à base de résine'
+
+rust:
+  label: 'Rust'
+  permalink: '/rust'
+  description: 'Documentation relative au langage de programmation Rust et à ses applications'
+
+safety:
+  label: 'Sécurité'
+  permalink: '/safety'
+  description: 'Documentation relative aux consignes de sécurité et aux bonnes pratiques'
+
+sql:
+  label: 'SQL'
+  permalink: '/sql'
+  description: 'Documentation relative aux bases de données SQL et aux langages de requête'
+
+storage:
+  label: 'Stockage'
+  permalink: '/storage'
+  description: 'Documentation relative aux solutions de stockage et aux bonnes pratiques'
+
+textile:
+  label: 'Textile'
+  permalink: '/textile'
+  description: 'Documentation relative aux technologies et pratiques textiles'
+
+waste:
+  label: 'Gaspillage'
+  permalink: '/waste'
+  description: 'Documentation relative à la gestion des déchets et aux pratiques de recyclage'

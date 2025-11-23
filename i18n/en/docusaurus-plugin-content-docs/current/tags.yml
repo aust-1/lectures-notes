@@ -1,0 +1,80 @@
+3d-printing:
+  label: '3D Printing'
+  permalink: '/3d-printing'
+  description: 'Docs related to 3D printing technologies and practices'
+
+
+charter:
+  label: 'Charter'
+  permalink: '/charter'
+  description: 'Docs related to charters and guidelines for various spaces'
+
+course:
+  label: 'Course'
+  permalink: '/course'
+  description: 'Docs related to training and courses offered'
+
+csharp:
+  label: 'C#'
+  permalink: '/csharp'
+  description: 'Docs related to C# programming language and its applications'
+
+docker:
+  label: 'Docker'
+  permalink: '/docker'
+  description: 'Docs related to Docker and containerization technologies'
+
+electronics:
+  label: 'Electronics'
+  permalink: '/electronics'
+  description: 'Docs related to electronics and circuitry'
+
+fabrication:
+  label: 'Fabrication'
+  permalink: '/fabrication'
+  description: 'Docs related to fabrication techniques and tools'
+
+info:
+  label: 'Info'
+  permalink: '/info'
+  description: 'Docs related to informatics and technology'
+
+latex:
+  label: 'LaTeX'
+  permalink: '/latex'
+  description: 'Docs related to LaTeX typesetting system and its applications'
+
+resin:
+  label: 'Resin'
+  permalink: '/resin'
+  description: 'Docs related to resin-based 3D printing technologies and practices'
+
+rust:
+  label: 'Rust'
+  permalink: '/rust'
+  description: 'Docs related to Rust programming language and its applications'
+
+safety:
+  label: 'Safety'
+  permalink: '/safety'
+  description: 'Docs related to safety guidelines and best practices'
+
+sql:
+  label: 'SQL'
+  permalink: '/sql'
+  description: 'Docs related to SQL databases and query languages'
+
+storage:
+  label: 'Storage'
+  permalink: '/storage'
+  description: 'Docs related to storage solutions and best practices'
+
+textile:
+  label: 'Textile'
+  permalink: '/textile'
+  description: 'Docs related to textile technologies and practices'
+
+waste:
+  label: 'Waste'
+  permalink: '/waste'
+  description: 'Docs related to waste management and recycling practices'
