@@ -39,14 +39,6 @@ const config: Config = {
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
         },
-        blog: {
-          routeBasePath: "workshops",
-          path: "blog",
-          showReadingTime: true,
-          blogTitle: "Workshops",
-          blogSidebarTitle: "All workshops",
-          blogSidebarCount: "ALL",
-        },
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -56,9 +48,9 @@ const config: Config = {
 
   themeConfig: {
     algolia: {
-      appId: "7B6MSZEWAH",
-      apiKey: "b77f0433b3372ea692844d52d1602c86",
-      indexName: "dvfl-documentation",
+      appId: "EFF084G86X",
+      apiKey: "2c25c4e02058fe212831fc846d9aed83",
+      indexName: "Lectures notes",
     },
     colorMode: {
       disableSwitch: false,
