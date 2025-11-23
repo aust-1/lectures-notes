@@ -7,7 +7,7 @@ import remarkMath from "remark-math";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "DVFL Documentation",
+  title: "Austin's Course Notes",
   favicon: "img/favicon.ico",
 
   url: "http://localhost:3000",
@@ -57,7 +57,7 @@ const config: Config = {
     },
     navbar: {
       logo: {
-        alt: "DVFL logo",
+        alt: "Austin's Course Notes Logo",
         src: "img/favicon.svg",
         srcDark: "img/favicon.svg",
       },
