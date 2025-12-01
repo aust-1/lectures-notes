@@ -46,11 +46,6 @@ const config: Config = {
   ],
 
   themeConfig: {
-    algolia: {
-      appId: "EFF084G86X",
-      apiKey: "2c25c4e02058fe212831fc846d9aed83",
-      indexName: "Lectures notes",
-    },
     colorMode: {
       disableSwitch: false,
       respectPrefersColorScheme: true,

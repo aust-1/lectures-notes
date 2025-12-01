@@ -8,7 +8,10 @@ const sidebars: SidebarsConfig = {
       label: "Engineering Science",
       collapsed: true,
       collapsible: true,
-      items: ["engineering_science/electricity"],
+      items: [
+        "engineering_science/thermodynamique",
+        "engineering_science/electricity",
+      ],
     },
     {
       type: "category",

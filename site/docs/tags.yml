@@ -52,3 +52,8 @@ latex:
   label: 'LaTeX'
   permalink: '/latex'
   description: 'Documentation relative au système de composition LaTeX et à ses applications'
+
+thermodynamics:
+  label: 'Thermodynamique'
+  permalink: '/lecture-notes/science-engineering/thermodynamics'
+  description: 'Notes de cours et documents pédagogiques de thermodynamique'
