@@ -57,3 +57,8 @@ thermodynamics:
   label: 'Thermodynamique'
   permalink: '/lecture-notes/science-engineering/thermodynamics'
   description: 'Notes de cours et documents pédagogiques de thermodynamique'
+
+algebra:
+  label: 'Algèbre'
+  permalink: '/lecture-notes/maths/algebra'
+  description: 'Notes de cours et documents pédagogiques d algèbre'

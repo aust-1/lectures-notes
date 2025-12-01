@@ -4,7 +4,7 @@ description: Notes de cours sur la thermodynamique systemes, bilans d'énergie e
 slug: thermodynamique
 tags: [lecture notes, A1, science engineering, thermodynamics]
 last_update:
-  date: 2024-01-31
+  date: 2025-01-12
   author: Eliott A. Roussille
 ---
 

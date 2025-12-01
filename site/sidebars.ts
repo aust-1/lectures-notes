@@ -5,6 +5,13 @@ const sidebars: SidebarsConfig = {
     "intro",
     {
       type: "category",
+      label: "Maths",
+      collapsed: true,
+      collapsible: true,
+      items: ["maths/algebra"],
+    },
+    {
+      type: "category",
       label: "Engineering Science",
       collapsed: true,
       collapsible: true,
