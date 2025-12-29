@@ -62,3 +62,8 @@ algebra:
   label: 'Algèbre'
   permalink: '/lecture-notes/maths/algebra'
   description: 'Notes de cours et documents pédagogiques d algèbre'
+
+meca:
+  label: 'Mécanique'
+  permalink: '/lecture-notes/science-engineering/meca'
+  description: 'Notes de cours et documents pédagogiques de mécanique'

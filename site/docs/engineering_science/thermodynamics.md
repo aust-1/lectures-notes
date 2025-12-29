@@ -1,7 +1,7 @@
 ---
 title: Thermodynamique
 description: Notes de cours sur la thermodynamique systemes, bilans d'énergie et entropie.
-slug: thermodynamique
+slug: thermodynamics
 tags: [lecture notes, A1, science engineering, thermodynamics]
 last_update:
   date: 2025-01-12

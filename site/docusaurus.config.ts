@@ -63,10 +63,6 @@ const config: Config = {
           label: "Documentation",
         },
         {
-          type: "localeDropdown",
-          position: "right",
-        },
-        {
           href: "https://github.com/aust-1/lectures-notes",
           position: "right",
           className: "header-github-link",
