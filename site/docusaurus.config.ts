@@ -15,8 +15,7 @@ const config: Config = {
 
   i18n: {
     defaultLocale: "fr",
-    locales: ["fr", "en"],
-    path: "i18n",
+    locales: ["fr"],
   },
 
   future: {
@@ -81,7 +80,7 @@ const config: Config = {
     footer: {
       links: [
         {
-          title: "Connect",
+          title: "Me Suivre",
           items: [
             {
               label: "Email",
