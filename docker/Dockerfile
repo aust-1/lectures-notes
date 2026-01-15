@@ -1,48 +1,35 @@
-# Stage 1: Base image.
-FROM node:24-slim AS base
-## Enable corepack as root first
-RUN corepack enable
-## Set the working directory to `/app`.
-WORKDIR /app
-## Disable colour output to make logs easier to read.
-ENV FORCE_COLOR=0
+# syntax=docker/dockerfile:1.6
 
-# Stage 2a: Development mode.
-FROM base AS dev
-## Set the working directory to `/app`.
+############################
+# 1) Build stage (Node)
+############################
+FROM node:20-alpine AS build
 WORKDIR /app
-## Expose the port that Docusaurus will run on.
-EXPOSE 3000
-## Create startup script
-COPY ./dev-startup.sh /dev-startup.sh
-## Convert Windows line endings to Unix line endings
-RUN sed -i 's/\r$//' /dev-startup.sh
-## Ensure the script is executable.
-RUN chmod +x /dev-startup.sh
-## Run the development server using the startup script
-CMD ["/dev-startup.sh"]
 
-# Stage 2b: Production build mode.
-FROM base AS prod
-## Copy over the source code from site directory.
-COPY site/ /app/
-## Install dependencies with `--frozen-lockfile` to ensure reproducibility.
-WORKDIR /app
-RUN pnpm install --frozen-lockfile --force
-## Build the static site.
-RUN pnpm build
+# Install deps (support npm/pnpm/yarn selon lockfile)
+COPY package.json package-lock.json* pnpm-lock.yaml* yarn.lock* ./
+RUN \
+    if [ -f package-lock.json ]; then npm ci; \
+    elif [ -f pnpm-lock.yaml ]; then corepack enable && pnpm i --frozen-lockfile; \
+    elif [ -f yarn.lock ]; then yarn --frozen-lockfile; \
+    else npm i; fi
 
-# Stage 3a: Serve with `docusaurus serve`.
-FROM prod AS serve
-## Expose the port that Docusaurus will run on.
-EXPOSE 3000
-# Before copying the healthcheck script
-RUN apt-get update && apt-get install -y curl wget && apt-get clean
-## Copy healthcheck script
-COPY docker/healthcheck.sh /healthcheck.sh
-RUN chmod +x /healthcheck.sh
-## Add health check to verify the service is running properly
-HEALTHCHECK --interval=30s --timeout=10s --start-period=90s --retries=3 \
-    CMD /healthcheck.sh
-## Run the production server.
-CMD ["pnpm", "serve", "--host", "0.0.0.0", "--port", "3000", "--no-open"]
+# Build
+COPY . .
+RUN npm run build
+
+############################
+# 2) Serve stage (Nginx)
+############################
+FROM nginx:alpine AS serve
+
+# Optional labels (tu peux lire ces args au build)
+ARG VERSION=dev
+ARG BUILD_DATE=unknown
+LABEL org.opencontainers.image.version=$VERSION \
+    org.opencontainers.image.created=$BUILD_DATE
+
+# Static site
+COPY --from=build /app/build /usr/share/nginx/html
+
+EXPOSE 80
