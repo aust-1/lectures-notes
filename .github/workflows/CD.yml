@@ -1,0 +1,39 @@
+name: Build and Push Docker Image
+
+on:
+    push:
+        branches:
+            - main
+
+permissions:
+    contents: read
+    packages: write
+
+jobs:
+    build-and-push-image:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Log in to the Container registry
+              uses: docker/login-action@v2
+              with:
+                  registry: ghcr.io
+                  username: ${{ github.repository_owner }}
+                  password: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Build and push Docker image
+              uses: docker/build-push-action@v6
+              with:
+                  context: .
+                  file: docker/Dockerfile
+                  target: serve
+                  push: true
+                  tags: |
+                      ghcr.io/aust-1/lectures-notes:latest
+                      ghcr.io/aust-1/lectures-notes:${{ github.sha }}
+                  build-args: |
+                      VERSION=${{ github.ref_name }}
+                      BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+                  cache-from: type=gha
+                  cache-to: type=gha,mode=max
