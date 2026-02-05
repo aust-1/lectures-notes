@@ -8,7 +8,12 @@ const sidebars: SidebarsConfig = {
       label: "Mathématiques",
       collapsed: true,
       collapsible: true,
-      items: ["maths/algebra", "maths/vectorial_spaces"],
+      items: [
+        "maths/algebra",
+        "maths/vectorial_spaces",
+        "maths/multivariable_analysis",
+        "maths/rde",
+      ],
     },
     {
       type: "category",

@@ -1,8 +1,8 @@
 ---
 title: Espaces vectoriels
-description: Notes de cours sur les espaces vectoriels, sous-espaces et applications lineaires.
+description: Notes de cours sur les espaces vectoriels, sous-espaces et applications linéaires.
 slug: vectorial_spaces
-tags: [lecture notes, A1, maths, vectorial spaces]
+tags: [lecture notes, A1, maths, algebra]
 last_update:
   date: 2026-02-05
   author: Eliott A. Roussille
@@ -16,7 +16,7 @@ last_update:
 
 ## Chapitre 2 : Espaces vectoriels
 
-Un ensemble $E$ est un espace vectoriel sur $\mathbb K$, noté $(E, \oplus, \otimes)$, ssi il verifie les 9 axiomes suivants :
+Un ensemble $E$ est un espace vectoriel sur $\mathbb K$, noté $(E, \oplus, \otimes)$, ssi il vérifie les 9 axiomes suivants :
 
 - Stabilité par la composition interne : $\forall (u, v) \in E^2$, $u \oplus v \in E$.
 - Commutativité de la composition interne : $\forall (u, v) \in E^2$, $u \oplus v = v \oplus u$.
