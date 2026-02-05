@@ -8,7 +8,7 @@ const sidebars: SidebarsConfig = {
       label: "Mathématiques",
       collapsed: true,
       collapsible: true,
-      items: ["maths/algebra"],
+      items: ["maths/algebra", "maths/vectorial_spaces"],
     },
     {
       type: "category",
