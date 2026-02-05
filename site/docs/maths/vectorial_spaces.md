@@ -2,7 +2,7 @@
 title: Espaces vectoriels
 description: Notes de cours sur les espaces vectoriels, sous-espaces et applications lineaires.
 slug: vectorial_spaces
-tags: [lecture notes, A1, maths, algebra]
+tags: [lecture notes, A1, maths, vectorial spaces]
 last_update:
   date: 2026-02-05
   author: Eliott A. Roussille
@@ -40,7 +40,7 @@ Toute intersection de sous-espaces vectoriels d'un $\mathbb K$-ev $E$ est un sou
 
 Soit $E$ un $\mathbb K$-ev et $(u_1, \dots, u_n)$ une famille de $E$. L'ensemble des combinaisons linéaires de cette famille est un sous-espace vectoriel de $E$, appelé sous-espace vectoriel engendré par la famille $(u_1, \dots, u_n)$. On note cet ensemble $Vect(u_1, \dots, u_n)$.
 
-:::example
+:::info[Exemple]
 $Vect(u_1, \dots, u_n) = \sum \lambda_i u_i = \{\lambda_1 u_1 + \dots + \lambda_n u_n \mid \lambda_1, \dots, \lambda_n \in \mathbb K\}$.
 
 $\mathbb R_p[X] = Vect(1, X, \dots, X^p)$.
@@ -50,7 +50,7 @@ $\mathbb R^n = Vect((1, 0, \dots, 0), (0, 1, 0, \dots, 0), \dots, (0, \dots, 0, 
 
 On peut écrire l'ensemble des solutions d'un système homogène sous forme de $Vect$.
 
-:::example
+:::info[Exemple]
 $S = \{(\lambda_1 + 2\lambda_2, \lambda_1 - \lambda_2) \mid \lambda_1, \lambda_2 \in \mathbb K\}$.
 
 $S = \{\lambda_1(1, 1) + \lambda_2(2, -1) \mid \lambda_1, \lambda_2 \in \mathbb K\}$.

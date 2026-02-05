@@ -19,6 +19,7 @@ const sidebars: SidebarsConfig = {
         "engineering_science/meca-i-static",
         "engineering_science/thermodynamics",
         "engineering_science/electricity",
+        "engineering_science/electronics",
       ],
     },
     {
