@@ -8,7 +8,7 @@ last_update:
   author: Eliott A. Roussille
 ---
 
-Ce cours repose sur les notions d'espaces vectoriels (EV).
+Ce cours s'appuie sur [les notes d'espaces vectoriels](vectorial_spaces.md)
 
 ## Chapitre 1 : Éléments propres et polynôme caractéristique
 
@@ -64,9 +64,9 @@ Soit $A$ une matrice représentant $f$ dans une base de $E$.
 
 ## Chapitre 2 : Diagonalisation
 
-### Definitions
+### Définitions
 
-- Endomorphisme diagonalisable : $f$ est diagonalisable ssi il existe une base de $E$ formee de vecteurs propres de $f$, ssi $Mat_f$ est diagonalisable.
+- Endomorphisme diagonalisable : $f$ est diagonalisable ssi il existe une base de $E$ formée de vecteurs propres de $f$, ssi $Mat_f$ est diagonalisable.
 - Matrice diagonalisable : $\mathcal{A}$ est diagonalisable ssi $\exists P \in \mathcal{M}_n(\mathbb{K})$ inversible telle que $P^{-1}\mathcal{A}P$ est diagonale.
 
 :::tip[Méthode (cas $2 \times 2$)]
@@ -148,7 +148,7 @@ $\mathcal{A}$ est diagonalisable ssi :
 - $\sum_{k=1}^{p} dim(E_{\lambda_k}) = n$.
 - $E_{\lambda_1} \oplus \dots \oplus E_{\lambda_p} = \mathcal{M}_{n\times 1}(\mathbb{K})$.
 
-Si $\mathcal{A}$ est symetrique, alors $\mathcal{A}$ est diagonalisable.
+Si $\mathcal{A}$ est symétrique, alors $\mathcal{A}$ est diagonalisable.
 
 ## Chapitre 3 : Applications de la diagonalisation
 
