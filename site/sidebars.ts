@@ -22,6 +22,7 @@ const sidebars: SidebarsConfig = {
       collapsible: true,
       items: [
         "engineering_science/meca-i-static",
+        "engineering_science/automatic-control",
         "engineering_science/thermodynamics",
         "engineering_science/electricity",
         "engineering_science/electronics",
