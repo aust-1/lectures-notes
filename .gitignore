@@ -21,3 +21,8 @@ yarn-debug.log*
 yarn-error.log*
 
 .vercel
+
+# Déploiement (dépôt opt)
+.env
+.env.*
+!.env.example
