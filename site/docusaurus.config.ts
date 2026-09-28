@@ -127,7 +127,7 @@ const config: Config = {
   // Statistiques de visite (Rybbit auto-hébergé, sans cookie) ; l'ID vient du tableau de bord
   scripts: [
     {
-      src: "https://analytics.eliott-roussille.fr/api/script.js",
+      src: "https://analytics.eliott-roussille.fr/api/script.js?siteId=1b1e712f7d86",
       "data-site-id": "2",
       defer: true,
     },
