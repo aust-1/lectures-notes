@@ -4,11 +4,13 @@
 
 @layer custom {
   :root {
-    --ifm-font-family-base: "Satoshi", "Satoshi-Variable", -apple-system,
-      BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
-      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --ifm-heading-font-family: "Puffin-Display-Soft-ExBd", "Puffin Display Soft",
-      "Satoshi", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    --ifm-font-family-base:
+      "Satoshi", "Satoshi-Variable", -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol";
+    --ifm-heading-font-family:
+      "Puffin-Display-Soft-ExBd", "Puffin Display Soft", "Satoshi",
+      -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
       sans-serif;
 
     --fab-orange: #f18904;
@@ -136,24 +138,8 @@
   }
 
   /* == == == Transitions == == == */
-  li a.menu__link {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:focus {
-      outline: none;
-    }
-
-    &:hover {
-      transform: translateX(4px);
-    }
-  }
-
-  .table-of-contents__link {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover {
-      transform: translateX(4px);
-    }
+  li a.menu__link:focus {
+    outline: none;
   }
 
   .markdown {
