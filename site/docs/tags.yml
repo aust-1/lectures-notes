@@ -82,3 +82,18 @@ electronics:
   label: 'Électronique'
   permalink: '/lecture-notes/science-engineering/electronics'
   description: 'Notes de cours et documents pédagogiques d électronique'
+
+probability:
+  label: 'Probabilités'
+  permalink: '/lecture-notes/maths/probability'
+  description: 'Notes de cours et documents pédagogiques de probabilités'
+
+statistics:
+  label: 'Statistiques'
+  permalink: '/lecture-notes/maths/statistics'
+  description: 'Notes de cours et documents pédagogiques de statistiques'
+
+electromagnetism:
+  label: 'Électromagnétisme'
+  permalink: '/lecture-notes/science-engineering/electromagnetism'
+  description: 'Notes de cours et documents pédagogiques d électromagnétisme'
