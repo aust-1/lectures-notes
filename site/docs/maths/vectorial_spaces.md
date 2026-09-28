@@ -28,7 +28,7 @@ Un ensemble $E$ est un espace vectoriel sur $\mathbb K$, noté $(E, \oplus, \oti
 - Associativité de la composition externe : $\forall (\lambda, \mu) \in \mathbb K^2$, $\forall u \in E$, $(\lambda \mu) \otimes u = \lambda \otimes (\mu \otimes u)$.
 - Élément neutre de la composition externe : $\forall u \in E$, $1 \otimes u = u$.
 
-Un ensemble $F$ est un sous-espace vectoriel de $E$ ssi il verifie les 3 conditions suivantes :
+Un ensemble $F$ est un sous-espace vectoriel de $E$ ssi il vérifie les 3 conditions suivantes :
 
 - $F \subset E$.
 - $\vec 0_E \in F$.

@@ -27,7 +27,7 @@ Avec LaTeX, vous pouvez écrire **absolument tout** en mathématiques :
 
 **La bonne nouvelle :** Il est impossible (et inutile) de connaître toutes les commandes LaTeX par cœur. Il en existe des milliers, et même les experts cherchent régulièrement la syntaxe exacte.
 
-:::tip Apprendre progressivement
+:::tip[Apprendre progressivement]
 Ne vous inquiétez pas si vous ne retenez pas tout immédiatement. La maîtrise vient avec la pratique. Les commandes que vous utilisez souvent (fractions, sommes, intégrales) se graveront naturellement dans votre mémoire. Pour le reste, il existe des outils !
 :::
 
@@ -46,7 +46,7 @@ Ne vous inquiétez pas si vous ne retenez pas tout immédiatement. La maîtrise 
 - Après quelques semaines, vous connaîtrez naturellement les symboles courants
 - Créez des snippets pour les commandes que vous tapez souvent (voir sections suivantes)
 
-:::note Mon conseil personnel
+:::note[Mon conseil personnel]
 Au début, gardez Detexify ouvert dans un onglet. Avec le temps, vous n'en aurez presque plus besoin pour les mathématiques courantes, mais il restera indispensable pour les symboles rares ou spécialisés.
 :::
 
@@ -81,7 +81,7 @@ $$
 }
 $$
 
-:::warning
+:::caution
 Ce qu'il y a écrit ci-dessus est faux, c'est uniquement à but démonstratif !
 :::
 
@@ -167,7 +167,7 @@ Comparez $\sum_{i=1}^{n} i$ avec $\displaystyle\sum_{i=1}^{n} i$ dans le texte.
 
 > Comparez $\sum_{i=1}^{n} i$ avec $\displaystyle\sum_{i=1}^{n} i$ dans le texte.
 
-:::tip Astuce professionnelle
+:::tip[Astuce professionnelle]
 En mode inline, évitez `\displaystyle` car il perturbe l'interligne. Préférez plutôt basculer en mode display avec `$$ ... $$` pour les expressions complexes.
 :::
 
@@ -240,7 +240,7 @@ Pour aligner plusieurs équations sur le symbole `&` :
 > \end{align}
 > $$
 
-:::note Numérotation
+:::note[Numérotation]
 `align` numérote automatiquement chaque ligne. Pour éviter la numérotation, utilisez `align*` ou ajoutez `\nonumber` sur une ligne spécifique.
 :::
 
@@ -291,7 +291,7 @@ LaTeX offre plusieurs environnements de matrices avec différents délimiteurs :
 | `vmatrix`     | `\| \|`     | `\begin{vmatrix} a & b \\ c & d \end{vmatrix}`         | $\begin{vmatrix} a & b \\ c & d \end{vmatrix}$         |
 | `smallmatrix` | Aucun       | `\begin{smallmatrix} a & b \\ c & d \end{smallmatrix}` | $\begin{smallmatrix} a & b \\ c & d \end{smallmatrix}$ |
 
-:::tip Usage pratique : smallmatrix
+:::tip[Usage pratique : smallmatrix]
 `smallmatrix` est parfait pour les vecteurs et petites matrices en mode inline, évitant de perturber l'interligne du paragraphe. Utilisez-le avec `\left(` et `\right)` pour ajouter des délimiteurs.
 
 ```latex
@@ -431,7 +431,7 @@ Ajoutez ces snippets dans votre configuration `latex.json` ou `markdown.json` :
 }
 ```
 
-:::tip Technique avancée : choix multiples
+:::tip[Technique avancée : choix multiples]
 La syntaxe `${1|option1,option2,option3|}` affiche un menu déroulant lors de l'insertion. Utilisé dans le snippet `mat` ci-dessus pour choisir le type de matrice.
 :::
 
@@ -545,7 +545,7 @@ J'ai créé une configuration complète avec **plus de 250 snippets** optimisés
 - <a href="/assets/docs/latex/default_snippets.js" target="_blank">**default_snippets.js**</a> (snippets personnalisés)
 - <a href="/assets/docs/latex/default_snippet_variables.js" target="_blank">**default_snippet_variables.js**</a> (variables et symboles)
 
-:::note Configuration complète
+:::note[Configuration complète]
 Les snippets couvrent :
 
 - Callouts Obsidian automatiques
@@ -565,7 +565,7 @@ Je vous conseille de lire le document même en diagonale pour les découvrir et 
 4. Aller dans **Snippets variables**
 5. Coller le contenu de `default_snippet_variables.js`
 
-:::tip Configuration recommandée
+:::tip[Configuration recommandée]
 Je vous conseille vivement d'utiliser ma configuration comme base, puis de la personnaliser selon vos besoins.
 :::
 

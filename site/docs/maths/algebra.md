@@ -11,7 +11,7 @@ last_update:
 ## Chapitre 1 : Outils de raisonnement
 
 - **Nombres transcendants** : réels ou complexes qui ne sont racines d'aucun polynôme à coefficients rationnels non tous nuls.
-- **Raisonnement par l'absurde** : supposer $P$ vraie et $\overline Q$ vraie, dériver une contradiction avec les hypothèses, conclure que $P \Rightarrow Q$.
+- **Raisonnement par l'absurde** : supposer $P$ vraie et $\overline Q$ vraie, en déduire une contradiction avec les hypothèses, conclure que $P \Rightarrow Q$.
 
 ### Récurrences
 
@@ -32,7 +32,7 @@ Lorsqu'il s'agit de montrer une propriété pour tous les entiers supérieurs à
 - Inclusion stricte : $A \varsubsetneq B \iff A \subset B$ et $A \neq B$
 - Ensemble des parties : $P(E)$ ; si $|E| = n$, alors $|P(E)| = 2^n$
 
-:::example
+:::info[Exemple]
 Pour $E = \{a, b, c\}$, $P(E) = \{\emptyset, \{a\}, \{b\}, \{c\}, \{a, b\}, \{a, c\}, \{b, c\}, \{a, b, c\}\}$.
 :::
 
@@ -57,8 +57,9 @@ Propriétés utiles :
 - Intersection : $\displaystyle \bigcap_{i=1}^n A_i = \{x \in E \mid \forall i \in [\![1, n]\!],\, x \in A_i\}$.
 - Ces définitions restent valables pour une famille $(A_i)_{i \in I}$ d'index quelconque.
 
-:::note Lois de De Morgan
-$(A \cup B)^C = A^C \cap B^C$ et $(A \cap B)^C = A^C \cup B^C$.\
+:::note[Lois de De Morgan]
+$(A \cup B)^C = A^C \cap B^C$ et $(A \cap B)^C = A^C \cup B^C$.
+
 Plus généralement, $(\bigcup_{i \in I} A_i)^C = \bigcap_{i \in I} A_i^C$ et $(\bigcap_{i \in I} A_i)^C = \bigcup_{i \in I} A_i^C$.
 :::
 
@@ -123,7 +124,7 @@ Terminologie : $f^{\leftarrow}(B)$ désigne aussi l'image réciproque de $B$ par
 
 - **Injection** : $f$ injective $\iff \forall (x_1, x_2) \in E^2,\ f(x_1) = f(x_2) \Rightarrow x_1 = x_2$
 - **Surjection** : $f$ surjective $\iff \forall y \in F,\ \exists x \in E$ tel que $f(x) = y$
-- **Bijection** : $f$ bijective $\iff f$ injective et surjective $\iff \forall y \in F,\ \nexists x \in E$ avec $f(x) = y$
+- **Bijection** : $f$ bijective $\iff f$ injective et surjective $\iff \forall y \in F,\ \exists!\, x \in E$ tel que $f(x) = y$
 
 ### Application réciproque et involutions
 

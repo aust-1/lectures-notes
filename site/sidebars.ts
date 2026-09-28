@@ -13,6 +13,7 @@ const sidebars: SidebarsConfig = {
         "maths/vectorial_spaces",
         "maths/multivariable_analysis",
         "maths/rde",
+        "maths/series",
       ],
     },
     {
@@ -22,8 +23,11 @@ const sidebars: SidebarsConfig = {
       collapsible: true,
       items: [
         "engineering_science/meca-i-static",
+        "engineering_science/meca-ii-dynamics",
         "engineering_science/automatic-control",
         "engineering_science/thermodynamics",
+        "engineering_science/heat-transfer",
+        "engineering_science/fluid-mechanics-thermodynamics",
         "engineering_science/electricity",
         "engineering_science/electronics",
       ],

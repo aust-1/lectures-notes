@@ -37,7 +37,7 @@ Soit $\mathcal{A} \in \mathcal{M}_n(\mathbb{K})$ et $f \in \mathcal{L}(E)$.
 Propriétés :
 
 - $E_{\lambda}(\mathcal{A}) = Ker(\mathcal{A} - \lambda I_n)$.
-- Soit $Sp(\mathcal{A}) = \{\lambda_1, \lambda_2, \dots, \lambda_m\}$. Pour tout $i$, si $u_i$ est un vecteur propre associe a $\lambda_i$, alors la famille $\{u_1, u_2, \dots, u_m\}$ est libre.
+- Soit $Sp(\mathcal{A}) = \{\lambda_1, \lambda_2, \dots, \lambda_m\}$. Pour tout $i$, si $u_i$ est un vecteur propre associé à $\lambda_i$, alors la famille $\{u_1, u_2, \dots, u_m\}$ est libre.
 - $E_{\lambda_1} + \dots + E_{\lambda_m} = E_{\lambda_1} \oplus \dots \oplus E_{\lambda_m}$ ssi $\forall i \neq j$, $E_{\lambda_i} \cap E_{\lambda_j} = \{\vec 0_E\}$.
 - $\mathcal{A}$ admet au plus $n$ valeurs propres distinctes.
 

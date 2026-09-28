@@ -1,4 +1,4 @@
-﻿---
+---
 title: Mécanique I - Statique
 description: Notes de cours sur les torseurs, la statique et les bases de cinématique du solide.
 slug: meca-i-static
@@ -32,11 +32,10 @@ En mécanique statique, on étudie les solides en équilibre sous l'action de fo
 ### Changement de base et dérivation
 
 - $\vec x_1 = \cos\theta\, \vec x_0 + \sin\theta\, \vec y_0$.
-- Sa dérivée : $(cos\theta)' \vec x_0+cos\theta (\vec x_0)'+(sin\theta)' \vec y_0+sin\theta (\vec y_0)'=\dot \theta(-sin\theta \vec x_0+cos \theta \vec y_0)=\dot \theta \vec y_1$.
-  > Car $\vec x_0$ et $\vec y_0$ sont fixes et $cos(f(x))'=-f'(x)sinf(x)$ et $\theta$ dépend du temps
-
-- $\displaystyle \frac{d_0 \vec x_1}{dt} = \frac {d_1 \vec x_1} {dt}+\vec \Omega_{01} \wedge \vec x_1= \dot \theta\, \vec y_1$.
-  > Car dans le repère 1, $\vec x_1$ est fixe donc sa dérivée est nulle et $\vec \Omega_{01} \wedge \vec x_1 = \dot \theta\, \vec z_0 \wedge \vec x_1 = \dot \theta\, \vec y_1$.
+- Sa dérivée : $(\cos\theta)' \vec x_0+\cos\theta\, (\vec x_0)'+(\sin\theta)' \vec y_0+\sin\theta\, (\vec y_0)'=\dot \theta(-\sin\theta\, \vec x_0+\cos \theta\, \vec y_0)=\dot \theta\, \vec y_1$,
+  car $\vec x_0$ et $\vec y_0$ sont fixes, $(\cos(f(x)))'=-f'(x)\sin(f(x))$ et $\theta$ dépend du temps.
+- $\displaystyle \frac{d_0 \vec x_1}{dt} = \frac {d_1 \vec x_1} {dt}+\vec \Omega_{01} \wedge \vec x_1= \dot \theta\, \vec y_1$,
+  car dans le repère 1, $\vec x_1$ est fixe donc sa dérivée est nulle, et $\vec \Omega_{01} \wedge \vec x_1 = \dot \theta\, \vec z_0 \wedge \vec x_1 = \dot \theta\, \vec y_1$.
 
 - **Formule de changement de base** :
   $$

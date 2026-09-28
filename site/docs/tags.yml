@@ -67,3 +67,18 @@ meca:
   label: 'Mécanique'
   permalink: '/lecture-notes/science-engineering/meca'
   description: 'Notes de cours et documents pédagogiques de mécanique'
+
+analysis:
+  label: 'Analyse'
+  permalink: '/lecture-notes/maths/analysis'
+  description: 'Notes de cours et documents pédagogiques d analyse'
+
+control:
+  label: 'Automatique'
+  permalink: '/lecture-notes/science-engineering/control'
+  description: 'Notes de cours et documents pédagogiques d automatique'
+
+electronics:
+  label: 'Électronique'
+  permalink: '/lecture-notes/science-engineering/electronics'
+  description: 'Notes de cours et documents pédagogiques d électronique'

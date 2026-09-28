@@ -15,13 +15,15 @@ last_update:
 - Un mot binaire est un groupe de bits, unité de base manipulée par un calculateur ou un microprocesseur.
 - Physiquement, l'information circule par alternance de tension ou de photons (fibre optique).
 - Chaque élément binaire est représenté par un état physique (signal électrique).
+
 <img src="/assets/docs/Architecture/Octet visuel.png" alt="Représentation graphique d'un octet" width="520" />
 
-:::note Codage de l'information
+:::note[Codage de l'information]
 
 - Représenter la grandeur physique par une suite de nombres (numérisation).
 - Coder chaque nombre en binaire.
 - Faire correspondre chaque bit à un état physique.
+
 :::
 
 L'écriture polynomiale d'un nombre en base $x$ est :
@@ -50,10 +52,13 @@ $$
   - Octet : 8 bits
   - Ko/Mo/Go/To : multiples par 1024
 
-> Si $x$ occupe $n$ bits et $y$ occupe $p$ bits alors :
->
-> - Somme $x + y$ : au plus $\max(n, p) + 1$ bits
-> - Produit $x \times y$ : au plus $n + p$ bits
+:::note[Taille des résultats]
+Si $x$ occupe $n$ bits et $y$ occupe $p$ bits alors :
+
+- Somme $x + y$ : au plus $\max(n, p) + 1$ bits.
+- Produit $x \times y$ : au plus $n + p$ bits.
+
+:::
 
 ## Chapitre 2 : Opérations logiques
 
@@ -122,7 +127,7 @@ Chaque porte possède ses performances propres (temps de montée/descente, temps
 - Deux blocs horizontaux relient des lignes de 5 points au même potentiel.
 - Deux colonnes sont dédiées à l'alimentation.
 - Les portes se placent entre les blocs, au-dessus du ravin.
-- Les LED ont une borne + (patte longue) et nécessitent une résistance $< 1 k\Omega$ côté cathode.
+- Les LED ont une borne + (patte longue) et nécessitent une résistance $< 1\ \text{k}\Omega$ côté cathode.
 
 <img src="/assets/docs/Architecture/Code couleur résistances.png" alt="Code couleur des résistances" width="360" />
 
@@ -150,7 +155,7 @@ En logique séquentielle, l'état précédent est mémorisé via des bascules : 
 
 #### Bascule RS avec des NOR
 
-- Entr�es `S` (Set) et `R` (Reset).
+- Entrées `S` (Set) et `R` (Reset).
 - Si `S=1` et `R=0` alors $Q=1$.
 - Si `S=0` et `R=1` alors $Q=0$.
 - Si `S=0` et `R=0` alors $Q$ conserve son état.
@@ -202,14 +207,16 @@ $$
 - Entrée `SI` (Serial In) pour le bit entrant et sortie `SO` (Serial Out) pour le bit sortant.
 
 Exemple de décalage à droite :
+
 <img src="/assets/docs/Architecture/registre de décalage.png" alt="Registre de décalage" width="520" />
 
 ### Compteurs / Décompteurs
 
 - Diviseur de fréquence : relier $\overline{Q}$ à $C$ pour un compteur (signal commençant par 0), $Q$ à $C$ pour un décompteur (signal commençant par 1).
-- On peut cumuler plusieurs diviseur de fréquence pour diviser par 4, 8, 16 etc. Pour cela on relie la sortie $Q$ du premier diviseur à l'horloge du second, et ainsi de suite.
+- On peut cumuler plusieurs diviseurs de fréquence pour diviser par 4, 8, 16, etc. Pour cela, on relie la sortie $Q$ du premier diviseur à l'horloge du second, et ainsi de suite.
 
-Exemple : diviseur de fréquence par 2
+Exemple : diviseur de fréquence par 2.
+
 <img src="/assets/docs/Architecture/diviseur de fréquence 2.png" alt="Diviseur de fréquence par 2" width="520" />
 
 ## Chapitre 5 : Microcontrôleur AVR
@@ -238,12 +245,16 @@ Exemple : diviseur de fréquence par 2
 - µc Harvard : données et programme séparés, plus rapide mais consomme davantage (MCU, DSP).
 - µp Von Neumann : registres partagés, consommation plus faible (PC).
 
-> RAM : Random Access Memory (volatile)
-> ROM : Read Only Memory
+:::note[Mémoires]
+
+- RAM : Random Access Memory (volatile).
+- ROM : Read Only Memory.
+
+:::
 
 ### Registre SREG
 
-| Bit | Nom            | R�le                              |
+| Bit | Nom            | Rôle                              |
 | --- | -------------- | --------------------------------- |
 | b5  | H (Half Carry) | Retenue intermédiaire             |
 | b4  | S              | `N xor V`                         |
@@ -252,7 +263,7 @@ Exemple : diviseur de fréquence par 2
 | b1  | Z (Zero)       | Résultat nul                      |
 | b0  | C (Carry)      | Retenue sur la dernière opération |
 
-## Chapitre 7 : Aspects logiciels du microcontrôleur AVR
+## Chapitre 6 : Aspects logiciels du microcontrôleur AVR
 
 ### Instructions en assembleur
 

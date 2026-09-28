@@ -1,6 +1,6 @@
 ---
 title: Analyse à plusieurs variables
-description: Notes de cours sur normes, limites, derivation et integrales en dimension superieure.
+description: Notes de cours sur les normes, limites, dérivées et intégrales en dimension supérieure.
 slug: multivariable_analysis
 tags: [lecture notes, A2, maths, analysis]
 last_update:
@@ -8,11 +8,9 @@ last_update:
   author: Eliott A. Roussille
 ---
 
-## Continuité et dérivation
+## Chapitre 1 : Normes, limites et continuité
 
-### Chapitre 1 : Normes, limites et continuité
-
-#### Normes et topologie
+### Normes et topologie
 
 :::note[Définition]
 Une norme sur un $\mathbb{R}$-ev $E$ est une application $\|\cdot\| : E \to \mathbb{R}^+$ qui vérifie :
@@ -47,7 +45,7 @@ Vocabulaire :
   - En dimension 1 : $\mathcal{V}_a = ]a-\eta, a+\eta[$.
   - En dimension 2 : $\mathcal{V}_a = B(a,\eta)$.
 
-#### Limites
+### Limites
 
 :::note[Définition]
 Soit $U$ un ouvert de $E$, $f : U \to F$, $a \in U$ et $l \in F$. On dit que $f$ tend vers $l$ quand $x$ tend vers $a$ si
@@ -72,7 +70,7 @@ $$
 $$
 :::
 
-#### Continuité
+### Continuité
 
 :::note[Définition]
 $f$ est continue en $a$ ssi $\lim_{x \to a} f(x) = f(a)$.
@@ -85,9 +83,9 @@ $$
 $$
 :::
 
-### Chapitre 2 : Dérivées d'ordre 1
+## Chapitre 2 : Dérivées d'ordre 1
 
-#### Différentiabilité et dérivées partielles
+### Différentiabilité et dérivées partielles
 
 :::note[Définition]
 Une fonction $f : U \subset \mathbb{R}^n \to \mathbb{R}^m$ est différentiable en $a \in U$ s'il existe une application linéaire $L$ telle que
@@ -126,7 +124,7 @@ $$
 
 :::
 
-#### Dérivation d'une composée
+### Dérivation d'une composée
 
 Soient $f : U \subset \mathbb{R}^n \to \mathbb{R}^m$ et $g : V \subset \mathbb{R}^m \to \mathbb{R}^I$ avec $f(U) \subset V$.
 On note $f=(f_1, \dots, f_m)$, $g=(g_1, \dots, g_I)$ et $h=g\circ f$.
@@ -149,7 +147,7 @@ $$
 \frac{\partial g}{\partial x} = \frac{\partial f}{\partial x}(u,v)\frac{\partial u}{\partial x} + \frac{\partial f}{\partial y}(u,v)\frac{\partial v}{\partial x}.
 $$
 
-#### Classe $C^1$
+### Classe $C^1$
 
 :::note[Définition]
 $f : U \subset \mathbb{R}^2 \to \mathbb{R}$ est de classe $C^1$ sur $U$ si $f$ est différentiable et $df$ est continue.
@@ -166,7 +164,7 @@ $f$ est de classe $C^1$ ssi ses dérivées partielles sont continues en tout poi
 
 :::
 
-### Chapitre 3 : Dérivées d'ordre 2
+## Chapitre 3 : Dérivées d'ordre 2
 
 Si $f$ est deux fois différentiable en $a$, alors sa matrice hessienne en $a$ est symétrique.
 
@@ -197,7 +195,7 @@ f(x,y) = -\frac{(x+y)^2}{2} + o((x+y)^2).
 $$
 :::
 
-#### Extrema locaux
+### Extrema locaux
 
 :::tip[Méthode]
 
@@ -206,9 +204,9 @@ $$
 
 :::
 
-### Chapitre 4 : Changements de coordonnées
+## Chapitre 4 : Changements de coordonnées
 
-#### Dans $\mathbb{R}^2$ et $\mathbb{R}^3$
+### Dans $\mathbb{R}^2$ et $\mathbb{R}^3$
 
 Coordonnées polaires :
 
@@ -270,11 +268,9 @@ $$
 et $\det J_{\varphi} = r^2\sin\theta$.
 :::
 
-## Primitives et intégrales
+## Chapitre 5 : 1-formes différentielles et champs de vecteurs
 
-### Chapitre 5 : 1-formes différentielles et champs de vecteurs
-
-#### Lexique
+### Lexique
 
 - Champ de vecteurs $\vec{V}$ : application $V: U \subset \mathbb{R}^n \to \mathbb{R}^n$.
 - Gradient $\vec{\nabla}f$ : direction de plus forte augmentation de $f$.
@@ -288,7 +284,7 @@ et $\det J_{\varphi} = r^2\sin\theta$.
 - Bord $\partial\Omega$ : ensemble des points délimitant une région $\Omega$.
 - Aire $\text{Aire}(S)$, volume $\text{Volume}(\Omega)=\iiint_{\Omega} dV$.
 
-#### Théorèmes fondamentaux
+### Théorèmes fondamentaux
 
 - Green-Riemann (2D) :
   $$
@@ -303,7 +299,7 @@ et $\det J_{\varphi} = r^2\sin\theta$.
   \iint_{\partial \Omega} \vec{V}\cdot \vec{n}\, dS = \iiint_{\Omega} div\,\vec{V}\, dV.
   $$
 
-#### Divergence et rotationnel
+### Divergence et rotationnel
 
 - $div\,\vec{V} = \vec{\nabla}\cdot\vec{V}$.
 - $\vec{rot}\,\vec{V} = \vec{\nabla} \wedge \vec{V}$.
@@ -315,7 +311,7 @@ $$
 
 <img src="/assets/docs/APV/Passage coordonnées.png" alt="Changement de coordonnées" width="380" />
 
-#### Primitives et potentiels scalaires
+### Primitives et potentiels scalaires
 
 :::note[Définition]
 $\vec{V}$ dérive d'un potentiel scalaire $f$ s'il existe $f$ différentiable tel que $\vec{V} = \vec{\nabla} f$.
@@ -330,7 +326,7 @@ Condition : $\vec{V}$ dérive d'un potentiel scalaire ssi $\vec{rot}\,\vec{V} = 
 
 :::
 
-#### Potentiels vecteurs
+### Potentiels vecteurs
 
 :::note[Définition]
 $\vec{V}$ dérive d'un potentiel vecteur $\vec{A}$ si $\vec{V} = \vec{rot}\,\vec{A}$.
@@ -345,9 +341,9 @@ Condition : $\vec{V}$ dérive d'un potentiel vecteur ssi $div\,\vec{V} = 0$.
 
 :::
 
-### Chapitre 6 : Intégrales doubles et triples
+## Chapitre 6 : Intégrales doubles et triples
 
-#### Théorème de Fubini
+### Théorème de Fubini
 
 Soit $f:[a,b]\times[c,d]\to \mathbb{R}$ continue. Alors
 $$
@@ -369,15 +365,15 @@ $$
 \iint_D f(x,y)\,dx\,dy = \iint_{\Omega} (f\circ\varphi)(u,v)\,|\det(J_{\varphi}(u,v))|\,du\,dv.
 $$
 
-:::tip Rappel
+:::tip[Rappel]
 
 - $dx\,dy = r\,dr\,d\theta$.
 - $dx\,dy\,dz = r^2\sin\varphi\,dr\,d\theta\,d\varphi$.
 :::
 
-### Chapitre 7 : Intégrales sur des courbes paramétrées
+## Chapitre 7 : Intégrales sur des courbes paramétrées
 
-#### Intégrales curvilignes
+### Intégrales curvilignes
 
 :::note[Définition]
 Une courbe paramétrée (classe $C^1$) est définie par un support $C \subset \mathbb{R}^n$ et une fonction $\gamma : [a,b] \to \mathbb{R}^n$ telle que $\gamma([a,b])=C$.
@@ -388,7 +384,7 @@ $$
 \int_{\gamma} \omega = \int_a^b \omega(\gamma(t))\,dt.
 $$
 
-#### Circulation de champs de vecteurs
+### Circulation de champs de vecteurs
 
 :::note[Définition]
 Circulation de $\vec{V}$ sur $\Gamma$ :
@@ -425,7 +421,7 @@ $$
 Résultat final (entraînement) : $2R(h_2 - h_1)$.
 :::
 
-#### Formule de Green-Riemann
+### Formule de Green-Riemann
 
 Lien entre l'intégrale sur le bord d'un domaine et la double intégrale sur ce domaine :
 
@@ -443,9 +439,9 @@ $$
 A=\text{Aire}(D),\quad A=-\int_{\Gamma} y\,dx = \int_{\Gamma} x\,dy = \frac{1}{2}\int_{\Gamma}(-y\,dx + x\,dy).
 $$
 
-### Chapitre 8 : Intégrales sur des surfaces paramétrées
+## Chapitre 8 : Intégrales sur des surfaces paramétrées
 
-#### Flux des champs de vecteurs
+### Flux des champs de vecteurs
 
 Surface paramétrée : $f : \Delta \subset \mathbb{R}^2 \to \mathbb{R}^3$, $S=f(\Delta)$.
 
@@ -459,13 +455,13 @@ $$
 \Phi = \iint_S \vec{V}\cdot \vec{n}\,dS = \iint_{\Delta} \vec{V}(f(u,v))\cdot \vec{n}(u,v)\,du\,dv.
 $$
 
-#### Théorème de Stokes
+### Théorème de Stokes
 
 $$
 \iint_S \vec{rot}\,\vec{V}\cdot \vec{n}\,dS = \oint_{\partial S} \vec{V}\cdot d\vec{l}.
 $$
 
-#### Formule de Green-Ostrogradsky
+### Formule de Green-Ostrogradsky
 
 $$
 \iint_{\partial \Omega}\vec{V}\cdot \vec{n}\,dS = \iiint_{\Omega} div\,\vec{V}\,dV.

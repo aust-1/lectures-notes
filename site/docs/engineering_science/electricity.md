@@ -10,13 +10,13 @@ last_update:
 
 ## Chapitre 1 : Lois fondamentales
 
-- **Loi des mailles** : le long d’une maille, la somme algébrique des tensions est nulle, $U_{AA} = 0\ \text{V}$.
+- **Loi des mailles** : le long d'une maille, la somme algébrique des tensions est nulle, $U_{AA} = 0\ \text{V}$.
   <img src="/assets/docs/Electricité/Lois des mailles.png" alt="Loi des mailles" width="380" />
 - **Loi des nœuds** : en chaque nœud, la somme des intensités arrivant est égale à la somme des intensités partant.
   <img src="/assets/docs/Electricité/Loi des noeuds.png" alt="Loi des nœuds" width="380" />
-- **Loi d’Ohm** : $U = R \times I$
+- **Loi d'Ohm** : $U = R \times I$
 
-:::note
+:::note[Rappels]
 
 - $i = \dot q$ et $1\ \text{A} = 1\ \text{C} \cdot \text{s}^{-1}$
 - $U_{AB} = V_A - V_B$ (flèche $B \rightarrow A$)
@@ -31,7 +31,7 @@ last_update:
 
 ## Chapitre 3 : Circuits résistifs
 
-### Caractéristiques d’un dipôle
+### Caractéristiques d'un dipôle
 
 - $U = E - rI$ si $U$ et $I$ sont opposés.
 - $U = E + rI$ si $U$ et $I$ sont identiques.
@@ -46,11 +46,16 @@ last_update:
 - **Diviseur de tension** (résistances en série) : $\displaystyle U_1 = \frac{R_1}{R_1 + R_\text{eq}} \times E$
 - **Diviseur de courant** (résistances en parallèle) : $\displaystyle I_1 = \frac{R_\text{eq}}{R_1 + R_\text{eq}} \times I_0$
 
-## Chapitre 4 : Théorèmes d’équivalence
+## Chapitre 4 : Théorèmes d'équivalence
 
-> **Point de fonctionnement** : couple $(U, I)$ du montage en régime établi.\
-> **Montage équivalent** : dipôle unique produisant le même point de fonctionnement.
-> <img src="/assets/docs/Electricité/Modèle équivalent Thévenin et Norton.png" alt="Modèle équivalent" width="420" />
+:::note[Définitions]
+
+- **Point de fonctionnement** : couple $(U, I)$ du montage en régime établi.
+- **Montage équivalent** : dipôle unique produisant le même point de fonctionnement.
+
+:::
+
+<img src="/assets/docs/Electricité/Modèle équivalent Thévenin et Norton.png" alt="Modèle équivalent" width="420" />
 
 ### Thévenin (MET)
 
@@ -74,10 +79,12 @@ Le courant dans une branche est la somme des courants obtenus quand on active un
 
 ### Millman
 
-Dans un montage de branches en dérivation, la tension aux bornes de ces branches est égale à la somme des tensions des générateurs respectivement multipliées par la conductance de la branche et divisée par la somme des conductances
+Dans un montage de branches en dérivation, la tension aux bornes de ces branches est égale à la somme des tensions des générateurs respectivement multipliées par la conductance de la branche et divisée par la somme des conductances :
+
 $$
 U_{AM} = \frac{\displaystyle\sum_{i=1}^n \frac{E_i}{R_i}}{\displaystyle\sum_{i=1}^n \frac{1}{R_i}}
 $$
+
 <img src="/assets/docs/Electricité/Millman.png" alt="Théorème de Millman" width="420" />
 
 ## Chapitre 5 : Méthodes de résolution
@@ -86,7 +93,7 @@ $$
 
 ### Loi des nœuds indépendants (méthode des potentiels de nœuds)
 
-Elle permet de trouver la différence de potentiel entre deux nœuds
+Elle permet de trouver la différence de potentiel entre deux nœuds.
 
 1. Choisir un nœud comme référentiel des potentiels (0 V).
 2. Appliquer la loi des nœuds.
@@ -100,17 +107,17 @@ Elle permet de trouver la différence de potentiel entre deux nœuds
 3. Résoudre le système pour les $n$ courants.
 
 :::tip
-$\,\text{GND}$ est l’origine des potentiels.
+$\,\text{GND}$ est l'origine des potentiels.
 :::
 
 ## Chapitre 6 : Régime transitoire
 
 ### Composants
 
-- **Condensateur** (capacité $C$, en Farad F)
+- **Condensateur** (capacité $C$ en farads, $\text{F}$)
   - N en série : $\displaystyle \frac{1}{C_T} = \sum_{i=1}^N \frac{1}{C_i}$ ; N en parallèle : $\displaystyle C_T = \sum_{i=1}^N C_i$
   - Courant : $\displaystyle i(t) = C \times \frac{d u_C(t)}{dt}$
-- **Bobine** (inductance $L$, en Henry H)
+- **Bobine** (inductance $L$ en henrys, $\text{H}$)
   - Génère un champ magnétique.
   - Empêche les variations brusques de courant.
   - N en série : $L_T = \sum_{i=1}^N L_i$ ; N en parallèle : $\displaystyle \frac{1}{L_T} = \sum_{i=1}^N \frac{1}{L_i}$

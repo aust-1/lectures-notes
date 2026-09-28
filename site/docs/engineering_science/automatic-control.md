@@ -51,7 +51,7 @@ Selon le facteur d'amortissement $\zeta$ :
 
 <img src="/assets/docs/Automatique et asservissements/Schema asservissement.png" alt="Schema d'asservissement" width="520" />
 
-:::note Lexique
+:::note[Lexique]
 
 - $R(s)$ : entrée (consigne).
 - $Y(s)$ : sortie.
@@ -66,7 +66,7 @@ Selon le facteur d'amortissement $\zeta$ :
 - Boucle **fermée** : présence d'une rétroaction.
 - Boucle **ouverte** : absence de rétroaction.
 
-:::caution Retour unitaire
+:::caution[Retour unitaire]
 Si la flèche de retour est présente sans bloc explicite de retour, on prend $C_r(s)=1$.
 :::
 
@@ -94,7 +94,7 @@ Pour $\displaystyle \text{FT}(s)=\frac{N(s)}{D(s)}$ :
 - Les racines de $N(s)$ sont les zéros.
 - Les racines de $D(s)$ sont les pôles.
 
-:::note Critère EBSB
+:::note[Critère EBSB]
 Entrée bornée implique sortie bornée. Un système linéaire est stable ssi tous les pôles de sa FT ont une partie réelle strictement négative.
 :::
 
@@ -128,7 +128,7 @@ Plus les racines de l'équation caractéristique $1 + C(s)G(s)$ sont à gauche d
   \varepsilon(s) = \frac{R(s)}{1 + C_d(s)C_r(s)}
   $$
 
-:::note Théorème de la valeur finale
+:::note[Théorème de la valeur finale]
 Si $f(t)=0$ pour $t<0$ et si tous les pôles de $sF(s)$ sont dans le demi-plan gauche, alors :
 
 $$

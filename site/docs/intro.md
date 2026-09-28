@@ -11,7 +11,7 @@ last_update:
 Bienvenue dans l'espace interne. Ce contenu est protégé par mot de passe côté client pour limiter le partage externe abusif.
 N'hésitez pas à contacter l'équipe de documentation pour toute question ou besoin d'accès.
 
-:::warning
+:::caution
 Toutes les notes de cours que vous verrez ici ont été créées par un étudiant pour ses propres besoins d'apprentissage.
 
 Elles ne sont pas des documents officiels du DeVinci Fablab et peuvent contenir des erreurs.
