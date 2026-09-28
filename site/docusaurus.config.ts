@@ -123,6 +123,15 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
   plugins: ["docusaurus-plugin-sass"],
+
+  // Statistiques de visite (Rybbit auto-hébergé, sans cookie) ; l'ID vient du tableau de bord
+  scripts: [
+    {
+      src: "https://analytics.eliott-roussille.fr/api/script.js",
+      "data-site-id": "2",
+      defer: true,
+    },
+  ],
 };
 
 export default config;
