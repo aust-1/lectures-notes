@@ -1,0 +1,46 @@
+/* tokens.css · rév. 2.0 — charte ER-2026-CH, palette C0 */
+:root {
+  --er-bg: #e7e5df; /* papier : fond, grain par-dessus */
+  --er-ink: #0b0c0e; /* encre : titres, blocs noirs */
+  --er-text: #2e3138; /* corps : texte long */
+  --er-muted: #4a4d55; /* gris : labels, méta */
+  --er-surface: #d6d3cb; /* aplat neutre, carte */
+  --er-dot: #c9c5bb; /* grille de points */
+  --er-signal: #ff5a1f; /* orange : aplats, CTA (texte encre) — jamais en petit texte */
+  --er-signal-text: #b53c0b; /* orange texte : liens, handle, notes */
+  --er-blue: #2b3bd6; /* un aplat par écran (texte papier) */
+
+  /* Dérivés : texte posé sur un aplat */
+  --er-on-signal: #0b0c0e; /* CTA : texte encre, dans les deux modes */
+  --er-on-blue: #e7e5df;
+  /* Bloc encre (code, pied de page) : il devient papier en sombre */
+  --er-on-block: var(--er-bg);
+  --er-on-block-muted: #a2a5ad;
+  --er-on-block-signal: #ff8a57;
+
+  /* Grain : tuile PNG 256 px sur tout l'écran */
+  --er-grain-opacity: 0.22;
+
+  --er-font-display: "Inter Tight", "Inter", system-ui, sans-serif;
+  --er-font-text: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --er-font-mono:
+    "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+[data-theme="dark"] {
+  --er-bg: #0e0f12; /* noir bleuté, jamais #000 */
+  --er-ink: #eeece6; /* les blocs noirs deviennent papier */
+  --er-text: #c4c6cb; /* moins de blanc pour lire longtemps */
+  --er-muted: #a2a5ad;
+  --er-surface: #1c1e23;
+  --er-dot: #24262c; /* un cran au-dessus du fond */
+  --er-signal: #ff6a2e;
+  --er-signal-text: #ff8a57;
+  --er-blue: #3646e8;
+
+  --er-on-blue: #eeece6;
+  --er-on-block-muted: #4a4d55;
+  --er-on-block-signal: #b53c0b;
+
+  --er-grain-opacity: 0.17;
+}

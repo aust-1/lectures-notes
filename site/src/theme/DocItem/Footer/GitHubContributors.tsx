@@ -61,17 +61,14 @@ const GitHubContributors = ({
 
   return (
     <div className={styles.contributors}>
-      <h3>
+      <p className={styles.title}>
         <Translate
           id="theme.DocItem.Footer.Contributors"
           description="The name of the contributors header"
-          values={{
-            Contributors: "Contributors",
-          }}
         >
-          {"Contributors"}
+          Contributeurs
         </Translate>
-      </h3>
+      </p>
 
       <ul className={styles.wrapper}>
         {contributors?.map((contributor) => {

@@ -16,14 +16,19 @@ export default function FooterWrapper(props: Props): JSX.Element {
     metadata.frontMatter.show_git_contributors !== false;
 
   if (!file) {
-    return <Footer {...props} />;
+    return (
+      <div className="er-doc-meta">
+        <Footer {...props} />
+      </div>
+    );
   }
 
   const info = GitUrlParse(file);
   const { name, owner, filepath } = info;
 
+  // Méta du document (édition, mise à jour, contributeurs) : le seul aplat bleu de l'écran
   return (
-    <>
+    <div className="er-doc-meta">
       <Footer {...props} />
       <GitHubContributors
         repo={name}
@@ -32,6 +37,6 @@ export default function FooterWrapper(props: Props): JSX.Element {
         showGitContributors={showGitContributors}
         additionalContributors={additionalContributors}
       />
-    </>
+    </div>
   );
 }

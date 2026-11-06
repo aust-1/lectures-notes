@@ -1,16 +1,23 @@
+// Contributeurs, posés dans l'aplat bleu des méta (.er-doc-meta).
+// Charte v2 : pas d'anneau ni d'ombre, libellés en mono.
 .contributors {
-  --contrib-ring-gap: 2px;
-  --contrib-ring-thickness: 2px;
-  --contrib-ring-color: var(--ifm-font-color-base);
-  --contrib-gap-color: var(--ifm-background-surface-color);
+  margin-top: 1.5rem;
 
-  margin-block: var(--ifm-spacing-vertical);
+  .title {
+    margin: 0;
+    font-family: var(--er-font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
 
   .wrapper {
     display: grid;
     grid-auto-rows: max-content;
-    grid-template-columns: repeat(auto-fit, minmax(74px, max-content));
-    gap: 10px clamp(18px, 2.5vw, 35px);
+    grid-template-columns: repeat(auto-fit, minmax(64px, max-content));
+    gap: 0.75rem clamp(1rem, 2vw, 1.75rem);
+    margin: 0;
     padding: 0;
 
     li {
@@ -19,35 +26,25 @@
   }
 
   .contributor figure {
-    margin: 20px 0 0 3px;
+    margin: 1rem 0 0;
   }
 
   .contributor img {
     display: flex;
-    border-radius: 50%;
+    width: 56px;
+    height: 56px;
     object-fit: cover;
-
-    box-shadow: 0 0 0 var(--contrib-ring-gap) var(--contrib-gap-color),
-      0 0 0 calc(var(--contrib-ring-gap) + var(--contrib-ring-thickness))
-        var(--contrib-ring-color);
-
-    transition: box-shadow var(--ifm-transition-fast)
-        var(--ifm-transition-timing-default),
-      transform var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+    transition: transform var(--ifm-transition-fast)
+      var(--ifm-transition-timing-default);
   }
 
-  .contributor img:hover {
-    box-shadow: 0 0 0 var(--contrib-ring-gap) var(--contrib-gap-color),
-      0 0 0 calc(var(--contrib-ring-gap) + var(--contrib-ring-thickness))
-        var(--ifm-pagination-nav-color-hover);
-    transform: scale(1.1);
+  .contributor a:hover img {
+    transform: translateY(-2px);
   }
 
-  a:focus-visible .contributor img,
   .contributor a:focus-visible img {
-    box-shadow: 0 0 0 var(--contrib-ring-gap) var(--contrib-gap-color),
-      0 0 0 calc(var(--contrib-ring-gap) + var(--contrib-ring-thickness))
-        var(--ifm-color-primary);
+    outline: 2px solid var(--er-on-blue);
+    outline-offset: 2px;
   }
 
   .caption {
@@ -57,25 +54,16 @@
     line-clamp: 2;
     overflow: hidden;
     text-overflow: ellipsis;
-
     overflow-wrap: anywhere;
-    hyphens: auto;
 
-    line-height: 1.1;
-    padding-bottom: 0.2em;
-
-    margin-top: 0.35rem;
-    text-align: center;
-    max-width: 74px;
+    max-width: 64px;
+    margin-top: 0.4rem;
+    font-family: var(--er-font-mono);
+    font-size: 0.75rem;
+    line-height: 1.2;
   }
 
   a:focus {
     outline: 0;
-  }
-
-  @media (max-width: 996px) {
-    .contributor figure {
-      margin-top: 12px;
-    }
   }
 }
