@@ -1,5 +1,5 @@
-# Site statique (Docusaurus + nginx), image publiée par .github/workflows/build-and-deploy.yml
-# (ghcr.io/aust-1/documentation). Ce compose ne construit rien : il ne fait que la tirer et la lancer.
+# Site statique (Docusaurus + nginx). Image publiée par .github/workflows/build-and-deploy.yml
+# (ghcr.io/aust-1/documentation) ; ce compose ne construit rien : opt-deploy (app-deploy.sh) la tire et la lance.
 name: documentation
 
 x-logging: &logging

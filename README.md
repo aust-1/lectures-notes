@@ -123,7 +123,9 @@ pnpm serve    # prévisualisation du build
 Chaque push sur `main` déclenche `.github/workflows/build-and-deploy.yml` :
 
 1. construction de l'image Docker (`docker/Dockerfile`, cible `serve`) et publication sur `ghcr.io/aust-1/documentation` ;
-2. connexion SSH au serveur, puis `docker compose pull` et `docker compose up -d`.
+2. connexion SSH au compte `gh-deploy` du serveur, avec une clé bridée à une seule commande, `sudo opt-deploy documentation` : le serveur avance ce sous-module, tire la nouvelle image et attend le healthcheck (mécanisme : `docs/ci-deploy.md` du dépôt opt).
+
+Secrets du dépôt : `VPS_HOST`, `VPS_SSH_KEY` (clé dédiée, autorisée par `deploy-install.sh --key documentation`) et `VPS_KNOWN_HOSTS`. L'image étant privée, le serveur doit pouvoir la tirer : soit rendre le paquet public (GitHub → Packages → documentation → Package settings), soit, une fois en root sur le serveur, `docker login ghcr.io -u aust-1` avec un jeton limité à `read:packages`. À la main, sur le serveur : `sudo opt-deploy documentation`.
 
 Sur le serveur, `docker-compose.yml` lance l'image sur le réseau `proxy`, et Caddy (`Caddyfile`) sert le site en HTTPS sur `docs.eliott-roussille.fr`.
 

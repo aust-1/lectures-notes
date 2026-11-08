@@ -1,16 +1,26 @@
 name: Build, Push and Deploy
+# 1. construit l'image du site et la publie sur ghcr.io/aust-1/documentation ;
+# 2. déploie : la clé SSH de ce dépôt est bridée sur le serveur à une seule commande,
+#    « sudo opt-deploy documentation », qui avance le sous-module, tire la nouvelle image et attend
+#    le healthcheck. Mécanisme et mise en place : docs/ci-deploy.md du dépôt opt.
+# Secrets requis (Settings → Secrets and variables → Actions) :
+#   VPS_HOST         IP ou nom du VPS
+#   VPS_SSH_KEY      clé privée dédiée à ce dépôt (autorisée par deploy-install.sh --key documentation)
+#   VPS_KNOWN_HOSTS  clé d'hôte du serveur, épinglée (jamais de confiance à la première clé vue)
 
 on:
   push:
     branches: ["main"]
+  workflow_dispatch:
 
 permissions:
   contents: read
   packages: write
 
+# Pas d'annulation : interrompre un déploiement en cours laisserait le serveur entre deux états.
 concurrency:
   group: "docs-deploy"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build-and-push:
@@ -52,25 +62,19 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build-and-push
+    permissions:
+      contents: read
     steps:
-      - name: Deploy over SSH (pull + up)
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.VPS_SSH_KEY }}
-          port: ${{ secrets.VPS_SSH_PORT }}
-          script: |
-            set -e
-
-            cd "${{ secrets.VPS_PATH }}"
-
-            # If image is private, login to GHCR (safe to keep even if public)
-            if [ -n "${{ secrets.GHCR_TOKEN }}" ]; then
-              echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u "${{ secrets.GHCR_USER }}" --password-stdin
-            fi
-
-            docker compose pull
-            docker compose up -d --remove-orphans
-
-            docker image prune -f
+      - name: Déployer (clé bridée à « opt-deploy documentation » sur le VPS)
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+          VPS_SSH_KEY: ${{ secrets.VPS_SSH_KEY }}
+          VPS_KNOWN_HOSTS: ${{ secrets.VPS_KNOWN_HOSTS }}
+        run: |
+          test -n "$VPS_KNOWN_HOSTS" || { echo "Secret VPS_KNOWN_HOSTS manquant" >&2; exit 1; }
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$VPS_SSH_KEY" > ~/.ssh/id_deploy
+          printf '%s\n' "$VPS_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/id_deploy ~/.ssh/known_hosts
+          ssh -T -i ~/.ssh/id_deploy -o BatchMode=yes -o StrictHostKeyChecking=yes \
+            -o UserKnownHostsFile="$HOME/.ssh/known_hosts" "gh-deploy@$VPS_HOST"
