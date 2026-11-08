@@ -46,7 +46,7 @@ const sidebars: SidebarsConfig = {
       label: "Informatique",
       collapsed: true,
       collapsible: true,
-      items: ["it/architecture"],
+      items: ["it/architecture", "it/machine-learning"],
     },
     {
       type: "category",
