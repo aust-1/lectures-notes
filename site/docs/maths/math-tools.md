@@ -1,7 +1,7 @@
 ---
 title: Outils mathématiques pour l'ingénieur
 description: Notes de cours sur les racines n-ièmes des nombres complexes et les polynômes.
-slug: math_tools
+slug: math-tools
 tags: [lecture notes, A1, maths, algebra]
 last_update:
   date: 2026-09-28

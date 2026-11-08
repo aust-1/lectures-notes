@@ -1,7 +1,7 @@
 ---
 title: Analyse à plusieurs variables
 description: Notes de cours sur les normes, limites, dérivées et intégrales en dimension supérieure.
-slug: multivariable_analysis
+slug: multivariable-analysis
 tags: [lecture notes, A2, maths, analysis]
 last_update:
   date: 2026-02-05
@@ -369,6 +369,7 @@ $$
 
 - $dx\,dy = r\,dr\,d\theta$.
 - $dx\,dy\,dz = r^2\sin\varphi\,dr\,d\theta\,d\varphi$.
+
 :::
 
 ## Chapitre 7 : Intégrales sur des courbes paramétrées

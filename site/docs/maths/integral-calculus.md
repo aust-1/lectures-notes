@@ -1,7 +1,7 @@
 ---
 title: Calcul intégral
 description: Notes de cours sur les intégrales généralisées, les intégrales à paramètre et la transformée de Laplace.
-slug: integral_calculus
+slug: integral-calculus
 tags: [lecture notes, A2, maths, analysis]
 last_update:
   date: 2026-09-28

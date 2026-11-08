@@ -1,7 +1,7 @@
 ---
 title: Dérivation et intégration
 description: Notes de cours sur l'analyse réelle, les relations de comparaison, les développements limités et les formules de Taylor.
-slug: differentiation_integration
+slug: differentiation-integration
 tags: [lecture notes, A1, maths, analysis]
 last_update:
   date: 2026-09-28

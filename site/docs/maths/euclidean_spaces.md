@@ -1,7 +1,7 @@
 ---
 title: Espaces euclidiens
 description: Notes de cours sur le produit scalaire, les bases orthonormées, les projections et symétries orthogonales.
-slug: euclidean_spaces
+slug: euclidean-spaces
 tags: [lecture notes, A2, maths, algebra]
 last_update:
   date: 2026-09-28

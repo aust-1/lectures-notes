@@ -1,7 +1,7 @@
 ---
 title: Espaces vectoriels
 description: Notes de cours sur les espaces vectoriels, sous-espaces et applications linéaires.
-slug: vectorial_spaces
+slug: vectorial-spaces
 tags: [lecture notes, A1, maths, algebra]
 last_update:
   date: 2026-02-05
