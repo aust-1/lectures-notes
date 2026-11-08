@@ -1,99 +1,109 @@
 lecture notes:
-  label: 'Notes de cours'
-  permalink: '/lecture-notes'
-  description: 'Notes de cours et documents pédagogiques'
+  label: "Notes de cours"
+  permalink: "/lecture-notes"
+  description: "Notes de cours et documents pédagogiques"
 
 A1:
-  label: 'Année 1'
-  permalink: '/lecture-notes/a1'
-  description: 'Notes de cours et documents pédagogiques pour l année 1'
+  label: "Année 1"
+  permalink: "/lecture-notes/a1"
+  description: "Notes de cours et documents pédagogiques pour l'année 1"
 
 A2:
-  label: 'Année 2'
-  permalink: '/lecture-notes/a2'
-  description: 'Notes de cours et documents pédagogiques pour l année 2'
+  label: "Année 2"
+  permalink: "/lecture-notes/a2"
+  description: "Notes de cours et documents pédagogiques pour l'année 2"
+
+A4:
+  label: "Année 4"
+  permalink: "/lecture-notes/a4"
+  description: "Notes de cours et documents pédagogiques pour l'année 4"
 
 maths:
-  label: 'Mathématiques'
-  permalink: '/lecture-notes/maths'
-  description: 'Notes de cours et documents pédagogiques de mathématiques'
+  label: "Mathématiques"
+  permalink: "/lecture-notes/maths"
+  description: "Notes de cours et documents pédagogiques de mathématiques"
 
 it:
-  label: 'Informatique'
-  permalink: '/lecture-notes/it'
-  description: 'Notes de cours et documents pédagogiques d informatique'
+  label: "Informatique"
+  permalink: "/lecture-notes/it"
+  description: "Notes de cours et documents pédagogiques d'informatique"
 
 science engineering:
-  label: 'Sciences de l ingénieur'
-  permalink: '/lecture-notes/science-engineering'
-  description: 'Notes de cours et documents pédagogiques de sciences de l ingénieur'
+  label: "Sciences de l'ingénieur"
+  permalink: "/lecture-notes/science-engineering"
+  description: "Notes de cours et documents pédagogiques de sciences de l'ingénieur"
 
 architecture:
-  label: 'Architecture des ordinateurs'
-  permalink: '/lecture-notes/it/architecture'
-  description: 'Notes de cours et documents pédagogiques sur l architecture des ordinateurs'
+  label: "Architecture des ordinateurs"
+  permalink: "/lecture-notes/it/architecture"
+  description: "Notes de cours et documents pédagogiques sur l'architecture des ordinateurs"
 
 electricity:
-  label: 'Électricité'
-  permalink: '/lecture-notes/science-engineering/electricity'
-  description: 'Notes de cours et documents pédagogiques d électricité'
+  label: "Électricité"
+  permalink: "/lecture-notes/science-engineering/electricity"
+  description: "Notes de cours et documents pédagogiques d'électricité"
 
 course:
-  label: 'Formation'
-  permalink: '/course'
-  description: 'Documentation relative aux formations et cours proposés'
+  label: "Formation"
+  permalink: "/course"
+  description: "Documentation relative aux formations et cours proposés"
 
 csharp:
-  label: 'C#'
-  permalink: '/csharp'
-  description: 'Documentation relative au langage de programmation C# et à ses applications'
+  label: "C#"
+  permalink: "/csharp"
+  description: "Documentation relative au langage de programmation C# et à ses applications"
 
 latex:
-  label: 'LaTeX'
-  permalink: '/latex'
-  description: 'Documentation relative au système de composition LaTeX et à ses applications'
+  label: "LaTeX"
+  permalink: "/latex"
+  description: "Documentation relative au système de composition LaTeX et à ses applications"
 
 thermodynamics:
-  label: 'Thermodynamique'
-  permalink: '/lecture-notes/science-engineering/thermodynamics'
-  description: 'Notes de cours et documents pédagogiques de thermodynamique'
+  label: "Thermodynamique"
+  permalink: "/lecture-notes/science-engineering/thermodynamics"
+  description: "Notes de cours et documents pédagogiques de thermodynamique"
 
 algebra:
-  label: 'Algèbre'
-  permalink: '/lecture-notes/maths/algebra'
-  description: 'Notes de cours et documents pédagogiques d algèbre'
+  label: "Algèbre"
+  permalink: "/lecture-notes/maths/algebra"
+  description: "Notes de cours et documents pédagogiques d'algèbre"
 
 meca:
-  label: 'Mécanique'
-  permalink: '/lecture-notes/science-engineering/meca'
-  description: 'Notes de cours et documents pédagogiques de mécanique'
+  label: "Mécanique"
+  permalink: "/lecture-notes/science-engineering/meca"
+  description: "Notes de cours et documents pédagogiques de mécanique"
 
 analysis:
-  label: 'Analyse'
-  permalink: '/lecture-notes/maths/analysis'
-  description: 'Notes de cours et documents pédagogiques d analyse'
+  label: "Analyse"
+  permalink: "/lecture-notes/maths/analysis"
+  description: "Notes de cours et documents pédagogiques d'analyse"
 
 control:
-  label: 'Automatique'
-  permalink: '/lecture-notes/science-engineering/control'
-  description: 'Notes de cours et documents pédagogiques d automatique'
+  label: "Automatique"
+  permalink: "/lecture-notes/science-engineering/control"
+  description: "Notes de cours et documents pédagogiques d'automatique"
 
 electronics:
-  label: 'Électronique'
-  permalink: '/lecture-notes/science-engineering/electronics'
-  description: 'Notes de cours et documents pédagogiques d électronique'
+  label: "Électronique"
+  permalink: "/lecture-notes/science-engineering/electronics"
+  description: "Notes de cours et documents pédagogiques d'électronique"
 
 probability:
-  label: 'Probabilités'
-  permalink: '/lecture-notes/maths/probability'
-  description: 'Notes de cours et documents pédagogiques de probabilités'
+  label: "Probabilités"
+  permalink: "/lecture-notes/maths/probability"
+  description: "Notes de cours et documents pédagogiques de probabilités"
 
 statistics:
-  label: 'Statistiques'
-  permalink: '/lecture-notes/maths/statistics'
-  description: 'Notes de cours et documents pédagogiques de statistiques'
+  label: "Statistiques"
+  permalink: "/lecture-notes/maths/statistics"
+  description: "Notes de cours et documents pédagogiques de statistiques"
 
 electromagnetism:
-  label: 'Électromagnétisme'
-  permalink: '/lecture-notes/science-engineering/electromagnetism'
-  description: 'Notes de cours et documents pédagogiques d électromagnétisme'
+  label: "Électromagnétisme"
+  permalink: "/lecture-notes/science-engineering/electromagnetism"
+  description: "Notes de cours et documents pédagogiques d'électromagnétisme"
+
+machine learning:
+  label: "Machine Learning"
+  permalink: "/lecture-notes/it/machine-learning"
+  description: "Notes de cours et documents pédagogiques de machine learning"
