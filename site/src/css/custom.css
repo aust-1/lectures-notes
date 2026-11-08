@@ -317,10 +317,21 @@
     }
   }
 
-  /* == == == Admonitions : aplat neutre, statut en mono == == == */
+  /* == == == Admonitions : barre de 4 px + étiquette en aplat ==
+   * Chaque type a sa couleur (--er-adm) : barre à gauche, fond teinté,
+   * titre mono posé sur un aplat de la même couleur.
+   *   note → gris · tip → encre · info → bleu · caution/warning → orange
+   *   danger → orange texte
+   */
   .theme-admonition,
   details.alert {
-    --ifm-alert-background-color: var(--er-surface);
+    --er-adm: var(--er-ink);
+    --er-adm-on: var(--er-bg);
+    --ifm-alert-background-color: color-mix(
+      in srgb,
+      var(--er-adm) 7%,
+      var(--er-surface)
+    );
     --ifm-alert-background-color-highlight: color-mix(
       in srgb,
       var(--er-ink) 8%,
@@ -331,38 +342,69 @@
     --ifm-alert-border-width: 0;
     --ifm-alert-border-left-width: 0;
     border: 0;
+    border-left: 4px solid var(--er-adm);
     box-shadow: none;
-    padding: 1.25rem 1.5rem;
+    padding: 1.25rem 1.5rem 1.35rem;
+    margin-block: 2rem;
     font-size: 1rem;
     line-height: 1.6;
+    color: var(--er-text);
 
     code {
       background: color-mix(in srgb, var(--er-ink) 8%, transparent);
     }
   }
 
+  .theme-admonition-note {
+    --er-adm: var(--er-muted);
+  }
+
+  .theme-admonition-info {
+    --er-adm: var(--er-blue);
+    --er-adm-on: var(--er-on-blue);
+  }
+
+  .theme-admonition-caution,
+  .theme-admonition-warning {
+    --er-adm: var(--er-signal);
+    --er-adm-on: var(--er-on-signal);
+  }
+
+  .theme-admonition-danger {
+    --er-adm: var(--er-signal-text);
+    --er-adm-on: var(--er-bg);
+  }
+
+  /* Étiquette : le titre devient un aplat de la couleur du type */
   .theme-admonition [class*="admonitionHeading"] {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.85rem;
+    padding: 0.3rem 0.6rem 0.25rem;
+    background: var(--er-adm);
+    color: var(--er-adm-on);
     font-family: var(--er-font-mono);
     font-size: 0.75rem;
-    font-weight: 500;
+    font-weight: 600;
+    line-height: 1.2;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--er-muted);
+
+    [class*="admonitionIcon"] {
+      display: inline-flex;
+      margin-right: 0;
+    }
 
     svg {
+      width: 1em;
+      height: 1em;
       fill: currentColor;
     }
   }
 
-  .theme-admonition-tip [class*="admonitionHeading"],
-  .theme-admonition-info [class*="admonitionHeading"] {
-    color: var(--er-ink);
-  }
-
-  .theme-admonition-caution [class*="admonitionHeading"],
-  .theme-admonition-warning [class*="admonitionHeading"],
-  .theme-admonition-danger [class*="admonitionHeading"] {
-    color: var(--er-signal-text);
+  .theme-admonition [class*="admonitionContent"] > :last-child {
+    margin-bottom: 0;
   }
 
   details.alert {
