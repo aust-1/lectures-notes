@@ -12,13 +12,13 @@ Notes de cours d'école d'ingénieur (mathématiques, sciences de l'ingénieur, 
 | ------------------------------------- | ------------------------------------------------ |
 | Algèbre                               | `site/docs/maths/algebra.md`                     |
 | Outils mathématiques pour l'ingénieur | `site/docs/maths/math_tools.md`                  |
-| Dérivation et intégration             | `site/docs/maths/differentiation_integration.md` |
-| Espaces vectoriels                    | `site/docs/maths/vectorial_spaces.md`            |
-| Espaces euclidiens                    | `site/docs/maths/euclidean_spaces.md`            |
-| Analyse à plusieurs variables         | `site/docs/maths/multivariable_analysis.md`      |
+| Dérivation et intégration             | `site/docs/maths/differentiation-integration.md` |
+| Espaces vectoriels                    | `site/docs/maths/vectorial-spaces.md`            |
+| Espaces euclidiens                    | `site/docs/maths/euclidean-spaces.md`            |
+| Analyse à plusieurs variables         | `site/docs/maths/multivariable-analysis.md`      |
 | Réduction d'endomorphismes            | `site/docs/maths/rde.md`                         |
 | Séries                                | `site/docs/maths/series.md`                      |
-| Calcul intégral                       | `site/docs/maths/integral_calculus.md`           |
+| Calcul intégral                       | `site/docs/maths/integral-calculus.md`           |
 | Probabilités                          | `site/docs/maths/probability.md`                 |
 | Statistiques                          | `site/docs/maths/statistics.md`                  |
 | Formulaire                            | `site/docs/maths/formulary.md`                   |
@@ -27,24 +27,25 @@ Notes de cours d'école d'ingénieur (mathématiques, sciences de l'ingénieur, 
 
 | Cours                                    | Fichier                                                           |
 | ---------------------------------------- | ----------------------------------------------------------------- |
-| Mécanique I - Statique                   | `site/docs/engineering_science/meca-i-static.md`                  |
-| Mécanique II - Dynamique                 | `site/docs/engineering_science/meca-ii-dynamics.md`               |
-| Résistance des matériaux                 | `site/docs/engineering_science/strength-of-materials.md`          |
-| Automatique et asservissements           | `site/docs/engineering_science/automatic-control.md`              |
-| Thermodynamique                          | `site/docs/engineering_science/thermodynamics.md`                 |
-| Transferts thermiques                    | `site/docs/engineering_science/heat-transfer.md`                  |
-| Mécanique des fluides et thermodynamique | `site/docs/engineering_science/fluid-mechanics-thermodynamics.md` |
-| Électricité                              | `site/docs/engineering_science/electricity.md`                    |
-| Électronique                             | `site/docs/engineering_science/electronics.md`                    |
-| Électromagnétisme                        | `site/docs/engineering_science/electromagnetism.md`               |
+| Mécanique I - Statique                   | `site/docs/engineering-science/meca-i-static.md`                  |
+| Mécanique II - Dynamique                 | `site/docs/engineering-science/meca-ii-dynamics.md`               |
+| Résistance des matériaux                 | `site/docs/engineering-science/strength-of-materials.md`          |
+| Automatique et asservissements           | `site/docs/engineering-science/automatic-control.md`              |
+| Thermodynamique                          | `site/docs/engineering-science/thermodynamics.md`                 |
+| Transferts thermiques                    | `site/docs/engineering-science/heat-transfer.md`                  |
+| Mécanique des fluides et thermodynamique | `site/docs/engineering-science/fluid-mechanics-thermodynamics.md` |
+| Électricité                              | `site/docs/engineering-science/electricity.md`                    |
+| Électronique                             | `site/docs/engineering-science/electronics.md`                    |
+| Électromagnétisme                        | `site/docs/engineering-science/electromagnetism.md`               |
 
 ### Informatique
 
 | Cours                                        | Fichier                                        |
 | -------------------------------------------- | ---------------------------------------------- |
 | Architecture                                 | `site/docs/it/architecture.md`                 |
-| Écrire des maths en LaTeX                    | `site/docs/learning_materials/latex.md`        |
-| Tests unitaires (exemples en C# avec MSTest) | `site/docs/learning_materials/unit-testing.md` |
+| Machine learning                             | `site/docs/it/machine-learning.md`             |
+| Écrire des maths en LaTeX                    | `site/docs/learning-materials/latex.md`        |
+| Tests unitaires (exemples en C# avec MSTest) | `site/docs/learning-materials/unit-testing.md` |
 
 ## Structure du dépôt
 
@@ -53,9 +54,9 @@ Notes de cours d'école d'ingénieur (mathématiques, sciences de l'ingénieur, 
 ├── site/                      # Site Docusaurus
 │   ├── docs/                  # Notes de cours (Markdown)
 │   │   ├── maths/
-│   │   ├── engineering_science/
+│   │   ├── engineering-science/
 │   │   ├── it/
-│   │   ├── learning_materials/
+│   │   ├── learning-materials/
 │   │   └── tags.yml           # Déclaration des tags
 │   ├── static/assets/docs/    # Images des notes, un dossier par cours
 │   ├── sidebars.ts            # Ordre et catégories de la barre latérale
@@ -80,7 +81,7 @@ pnpm serve    # prévisualisation du build
 
 ## Ajouter ou modifier une note
 
-1. Créer le fichier dans le dossier de la matière (`site/docs/maths/`, `site/docs/engineering_science/`, …). Nom de fichier en anglais : `snake_case` pour les maths, `kebab-case` pour les sciences de l'ingénieur.
+1. Créer le fichier dans le dossier de la matière (`site/docs/maths/`, `site/docs/engineering-science/`, …). Nom de fichier en anglais : `snake_case` pour les maths, `kebab-case` pour les sciences de l'ingénieur.
 2. Commencer par le frontmatter :
 
    ```yaml

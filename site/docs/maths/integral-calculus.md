@@ -8,7 +8,7 @@ last_update:
   author: Eliott A. Roussille
 ---
 
-Ce cours s'appuie sur [les notes de dérivation et intégration](differentiation_integration.md)
+Ce cours s'appuie sur [les notes de dérivation et intégration](differentiation-integration.md)
 
 ## Chapitre 1 : Intégrales généralisées
 

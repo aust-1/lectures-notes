@@ -8,7 +8,7 @@ last_update:
   author: Eliott A. Roussille
 ---
 
-Ce cours s'appuie sur [les notes d'espaces vectoriels](vectorial_spaces.md)
+Ce cours s'appuie sur [les notes d'espaces vectoriels](vectorial-spaces.md)
 
 ## Chapitre 1 : Éléments propres et polynôme caractéristique
 
