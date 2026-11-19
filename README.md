@@ -11,7 +11,7 @@ Notes de cours d'école d'ingénieur (mathématiques, sciences de l'ingénieur, 
 | Cours                                 | Fichier                                          |
 | ------------------------------------- | ------------------------------------------------ |
 | Algèbre                               | `site/docs/maths/algebra.md`                     |
-| Outils mathématiques pour l'ingénieur | `site/docs/maths/math_tools.md`                  |
+| Outils mathématiques pour l'ingénieur | `site/docs/maths/math-tools.md`                  |
 | Dérivation et intégration             | `site/docs/maths/differentiation-integration.md` |
 | Espaces vectoriels                    | `site/docs/maths/vectorial-spaces.md`            |
 | Espaces euclidiens                    | `site/docs/maths/euclidean-spaces.md`            |
@@ -69,7 +69,7 @@ Notes de cours d'école d'ingénieur (mathématiques, sciences de l'ingénieur, 
 
 ## Développement local
 
-Prérequis : Node.js 18 ou plus et [pnpm](https://pnpm.io).
+Prérequis : Node.js 20 ou plus (minimum exigé par Docusaurus 3.9 ; Node 20 n'étant plus maintenu, préférer 22 ou 24) et [pnpm](https://pnpm.io).
 
 ```shell
 cd site
@@ -81,7 +81,7 @@ pnpm serve    # prévisualisation du build
 
 ## Ajouter ou modifier une note
 
-1. Créer le fichier dans le dossier de la matière (`site/docs/maths/`, `site/docs/engineering-science/`, …). Nom de fichier en anglais : `snake_case` pour les maths, `kebab-case` pour les sciences de l'ingénieur.
+1. Créer le fichier dans le dossier de la matière (`site/docs/maths/`, `site/docs/engineering-science/`, …). Nom de fichier en anglais et en `kebab-case` (par exemple `math-tools.md`), comme le slug ; c'est aussi l'identifiant à utiliser dans `site/sidebars.ts`.
 2. Commencer par le frontmatter :
 
    ```yaml
