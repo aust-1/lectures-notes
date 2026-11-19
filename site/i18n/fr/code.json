@@ -1,0 +1,42 @@
+{
+  "theme.SearchBar.label": {
+    "message": "Rechercher",
+    "description": "Recherche locale (@easyops-cn/docusaurus-search-local), sans traduction française fournie par le plugin"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "Voir tous les résultats",
+    "description": "Recherche locale (@easyops-cn/docusaurus-search-local), sans traduction française fournie par le plugin"
+  },
+  "theme.SearchBar.noResultsText": {
+    "message": "Aucun résultat",
+    "description": "Recherche locale (@easyops-cn/docusaurus-search-local), sans traduction française fournie par le plugin"
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "Voir tous les résultats dans « {context} »",
+    "description": "Recherche locale (@easyops-cn/docusaurus-search-local), sans traduction française fournie par le plugin"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "Voir tous les résultats hors de « {context} »",
+    "description": "Recherche locale (@easyops-cn/docusaurus-search-local), sans traduction française fournie par le plugin"
+  },
+  "theme.SearchPage.existingResultsTitle": {
+    "message": "Résultats de recherche pour « {query} »",
+    "description": "Recherche locale (@easyops-cn/docusaurus-search-local), sans traduction française fournie par le plugin"
+  },
+  "theme.SearchPage.emptyResultsTitle": {
+    "message": "Rechercher dans les notes",
+    "description": "Recherche locale (@easyops-cn/docusaurus-search-local), sans traduction française fournie par le plugin"
+  },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "Un document trouvé|{count} documents trouvés",
+    "description": "Recherche locale (@easyops-cn/docusaurus-search-local), sans traduction française fournie par le plugin"
+  },
+  "theme.SearchPage.noResultsText": {
+    "message": "Aucun document trouvé",
+    "description": "Recherche locale (@easyops-cn/docusaurus-search-local), sans traduction française fournie par le plugin"
+  },
+  "theme.SearchPage.searchContext.everywhere": {
+    "message": "Partout",
+    "description": "Recherche locale (@easyops-cn/docusaurus-search-local), sans traduction française fournie par le plugin"
+  }
+}
