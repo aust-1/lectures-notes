@@ -77,7 +77,7 @@ const config: Config = {
     },
   ],
 
-  url: "http://localhost:3000",
+  url: "https://docs.eliott-roussille.fr",
   baseUrl: "/",
 
   i18n: {

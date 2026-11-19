@@ -1,1 +1,3 @@
 # Algolia-Crawler-Verif: 585E5965BF940282
+
+Sitemap: https://docs.eliott-roussille.fr/sitemap.xml
