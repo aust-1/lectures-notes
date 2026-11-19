@@ -111,6 +111,25 @@ const config: Config = {
     ],
   ],
 
+  // Recherche locale : index construit au build, servi par le site, sans service tiers
+  themes: [
+    [
+      "@easyops-cn/docusaurus-search-local",
+      {
+        hashed: true,
+        language: ["fr"],
+        docsRouteBasePath: "/",
+        indexDocs: true,
+        indexBlog: false,
+        indexPages: false,
+        highlightSearchTermsOnTargetPage: true,
+        searchResultLimits: 10,
+        // KaTeX rend chaque formule deux fois (MathML + HTML) : on n'indexe que le MathML et la source LaTeX
+        ignoreCssSelectors: [".katex-html"],
+      },
+    ],
+  ],
+
   themeConfig: {
     colorMode: {
       disableSwitch: false,
