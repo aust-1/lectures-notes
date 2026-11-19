@@ -6,6 +6,7 @@ build/
 
 # Generated files
 .docusaurus
+.git-contributors.json
 .cache-loader
 .pnpm-store
 

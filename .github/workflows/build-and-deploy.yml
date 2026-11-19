@@ -28,6 +28,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # historique complet : contributeurs de chaque note
+
+      # L'image est construite sans .git : les contributeurs (git log) sont calculés ici,
+      # puis lus au build depuis site/.git-contributors.json (voir site/scripts/git-contributors.mjs).
+      - name: Compute note contributors
+        run: node site/scripts/git-contributors.mjs
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
