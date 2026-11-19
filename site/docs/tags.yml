@@ -13,6 +13,11 @@ A2:
   permalink: "/lecture-notes/a2"
   description: "Notes de cours et documents pédagogiques pour l'année 2"
 
+A3:
+  label: "Année 3"
+  permalink: "/lecture-notes/a3"
+  description: "Notes de cours et documents pédagogiques pour l'année 3"
+
 A4:
   label: "Année 4"
   permalink: "/lecture-notes/a4"
