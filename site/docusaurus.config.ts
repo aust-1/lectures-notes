@@ -7,6 +7,29 @@ import remarkMath from "remark-math";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 /**
+ * rehype-katex rattrape les erreurs de KaTeX (y compris celles levées par
+ * `strict: "error"`) et n'en fait qu'un message sur le fichier, que Docusaurus
+ * n'affiche pas. Ce plugin, placé juste après, les rend bloquantes.
+ */
+const rehypeKatexStrict =
+  () =>
+  (
+    _tree: unknown,
+    file: {
+      path?: string;
+      messages: { source?: string | null; reason: string; line?: number | null; cause?: unknown }[];
+    },
+  ) => {
+    const errors = file.messages.filter((message) => message.source === "rehype-katex");
+    if (errors.length > 0) {
+      const details = errors
+        .map((error) => `  l. ${error.line ?? "?"} : ${error.cause instanceof Error ? error.cause.message : error.reason}`)
+        .join("\n");
+      throw new Error(`Formule KaTeX invalide dans ${file.path ?? "un document"} :\n${details}`);
+    }
+  };
+
+/**
  * Coloration du code selon la charte v2 : le bloc de code est un « bloc noir »
  * (encre en clair, papier en sombre). Palette réduite : orange texte pour les
  * mots-clés, gris pour les commentaires, graisse pour les noms. Pas d'italique.
@@ -91,6 +114,15 @@ const config: Config = {
     },
   },
 
+  // Build strict : un lien, une ancre ou un lien Markdown cassé fait échouer le build
+  onBrokenLinks: "throw",
+  onBrokenAnchors: "throw",
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "throw",
+    },
+  },
+
   presets: [
     [
       "classic",
@@ -101,8 +133,11 @@ const config: Config = {
           editUrl: "https://github.com/aust-1/lectures-notes/tree/main/site/",
           editLocalizedFiles: true,
           showLastUpdateTime: true,
+          // Tout tag doit être déclaré dans docs/tags.yml
+          onInlineTags: "throw",
           remarkPlugins: [remarkMath],
-          rehypePlugins: [rehypeKatex],
+          // strict: "error" + rehypeKatexStrict : une formule que KaTeX ne comprend pas fait échouer le build
+          rehypePlugins: [[rehypeKatex, { strict: "error" }], rehypeKatexStrict],
         },
         theme: {
           customCss: "./src/css/custom.css",

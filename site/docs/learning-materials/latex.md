@@ -665,12 +665,12 @@ Tapez une lettre suivie de :
 
 Sélectionnez du texte puis appuyez sur :
 
-| Touche | Transformation         | Exemple                        | Aperçu                 |
-| ------ | ---------------------- | ------------------------------ | ---------------------- |
-| `S`    | `\sqrt{...}`           | `x+1` → `\sqrt{x+1}`           | $\sqrt{x+1}$           |
-| `U`    | `\underbrace{...}_{•}` | `a+b` → `\underbrace{a+b}_{•}` | $\underbrace{a+b}_{•}$ |
-| `O`    | `\overbrace{...}^{•}`  | `a+b` → `\overbrace{a+b}^{•}`  | $\overbrace{a+b}^{•}$  |
-| `C`    | `\cancel{...}`         | `x` → `\cancel{x}`             | $\cancel{x}$           |
+| Touche | Transformation         | Exemple                        | Aperçu                       |
+| ------ | ---------------------- | ------------------------------ | ---------------------------- |
+| `S`    | `\sqrt{...}`           | `x+1` → `\sqrt{x+1}`           | $\sqrt{x+1}$                 |
+| `U`    | `\underbrace{...}_{•}` | `a+b` → `\underbrace{a+b}_{•}` | $\underbrace{a+b}_{\bullet}$ |
+| `O`    | `\overbrace{...}^{•}`  | `a+b` → `\overbrace{a+b}^{•}`  | $\overbrace{a+b}^{\bullet}$  |
+| `C`    | `\cancel{...}`         | `x` → `\cancel{x}`             | $\cancel{x}$                 |
 
 </details>
 
