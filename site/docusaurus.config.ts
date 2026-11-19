@@ -182,7 +182,14 @@ const config: Config = {
       ],
     },
   } satisfies Preset.ThemeConfig,
-  plugins: ["docusaurus-plugin-sass"],
+  plugins: [
+    "docusaurus-plugin-sass",
+    // La vue d'ensemble (docs/intro.md) est servie à la racine ; l'ancienne adresse /intro y redirige
+    [
+      "@docusaurus/plugin-client-redirects",
+      { redirects: [{ from: "/intro", to: "/" }] },
+    ],
+  ],
 
   // Statistiques de visite (Rybbit auto-hébergé, sans cookie) ; l'ID vient du tableau de bord
   scripts: [

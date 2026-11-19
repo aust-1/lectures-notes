@@ -2,7 +2,7 @@
 title: Documentation interne
 sidebar_label: Vue d'ensemble
 description: Documentation interne protégée par mot de passe côté client.
-slug: intro
+slug: /
 last_update:
   date: 2026-09-28
   author: Eliott A. Roussille
