@@ -61,8 +61,8 @@ importers:
         specifier: ^3.8.1
         version: 3.8.1
       '@docusaurus/types':
-        specifier: ^3.8.1
-        version: 3.8.1(acorn@8.15.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+        specifier: ^3.9.2
+        version: 3.9.2(acorn@8.15.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       git-url-parse:
         specifier: ^16.1.0
         version: 16.1.0
