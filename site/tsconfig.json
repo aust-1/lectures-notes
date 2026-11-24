@@ -6,5 +6,5 @@
     "jsx": "react",
     "esModuleInterop": true,
   },
-  "exclude": [".docusaurus", "build"]
+  "exclude": [".docusaurus", "build", "static"]
 }
