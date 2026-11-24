@@ -61,7 +61,7 @@ Notes de cours d'école d'ingénieur (mathématiques, sciences de l'ingénieur, 
 │   ├── static/assets/docs/    # Images des notes, un dossier par cours
 │   ├── sidebars.ts            # Ordre et catégories de la barre latérale
 │   └── docusaurus.config.ts
-├── docker/Dockerfile          # Build Node puis service statique nginx
+├── docker/Dockerfile          # Build Node puis nginx sans privilèges (config. nginx incluse)
 ├── docker-compose.yml         # Lancement de l'image publiée sur le serveur
 ├── Caddyfile                  # Reverse proxy HTTPS
 └── .github/workflows/         # CI : build, push et déploiement
@@ -122,12 +122,21 @@ pnpm serve    # prévisualisation du build
 
 Chaque push sur `main` déclenche `.github/workflows/build-and-deploy.yml` :
 
-1. construction de l'image Docker (`docker/Dockerfile`, cible `serve`) et publication sur `ghcr.io/aust-1/documentation` ;
-2. connexion SSH au compte `gh-deploy` du serveur, avec une clé bridée à une seule commande, `sudo opt-deploy documentation` : le serveur avance ce sous-module, tire la nouvelle image et attend le healthcheck (mécanisme : `docs/ci-deploy.md` du dépôt opt).
+1. construction de l'image Docker (`docker/Dockerfile`, cible `serve`) et publication sur `ghcr.io/aust-1/documentation`, étiquetée par le SHA du commit (et `latest` pour `main`) ;
+2. connexion SSH au compte `gh-deploy` du serveur, avec une clé bridée à une seule commande, `sudo opt-deploy documentation` : le serveur avance ce sous-module, tire la nouvelle image et attend le healthcheck (mécanisme : `docs/ci-deploy.md` du dépôt opt) ;
+3. vérification : le site publie le commit dont il est construit (`/revision.txt`), et le job échoue si `https://docs.eliott-roussille.fr/revision.txt` ne renvoie pas le SHA déployé.
 
 Secrets du dépôt : `VPS_HOST`, `VPS_SSH_KEY` (clé dédiée, autorisée par `deploy-install.sh --key documentation`) et `VPS_KNOWN_HOSTS`. L'image étant privée, le serveur doit pouvoir la tirer : soit rendre le paquet public (GitHub → Packages → documentation → Package settings), soit, une fois en root sur le serveur, `docker login ghcr.io -u aust-1` avec un jeton limité à `read:packages`. À la main, sur le serveur : `sudo opt-deploy documentation`.
 
-Sur le serveur, `docker-compose.yml` lance l'image sur le réseau `proxy`, et Caddy (`Caddyfile`) sert le site en HTTPS sur `docs.eliott-roussille.fr`.
+Sur le serveur, `docker-compose.yml` lance l'image sur le réseau `proxy` (nginx sans privilèges sur le port 8080, système de fichiers en lecture seule), et Caddy (`Caddyfile`) sert le site en HTTPS sur `docs.eliott-roussille.fr`. L'image utilisée est `ghcr.io/aust-1/documentation:${DOCS_TAG:-latest}` : `DOCS_TAG`, exporté au déploiement avec le SHA du commit déployé, relie la version en service à un commit ; sans lui, c'est `latest`.
+
+### Revenir à une version précédente
+
+Chaque commit de `main` a son image sur GHCR, étiquetée par son SHA.
+
+- Correction durable : `git revert` du commit fautif sur `main` ; le workflow reconstruit et redéploie.
+- Retour immédiat, en root sur le serveur, depuis le dépôt opt : `DOCS_TAG=<sha d'un commit précédent> scripts/app-deploy.sh documentation` (tire l'étiquette, relance le conteneur et attend le healthcheck). Le prochain déploiement repasse sur le dernier commit de `main`.
+- Contrôle : `curl https://docs.eliott-roussille.fr/revision.txt` affiche le commit servi ; sur le serveur, `docker inspect --format '{{ index .Config.Labels "org.opencontainers.image.revision" }}'` sur le conteneur donne le même SHA.
 
 ## Licence
 

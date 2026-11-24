@@ -1,4 +1,4 @@
 docs.eliott-roussille.fr {
 	encode zstd gzip
-	reverse_proxy documentation:80
+	reverse_proxy documentation:8080
 }
