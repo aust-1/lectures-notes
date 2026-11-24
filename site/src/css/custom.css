@@ -320,8 +320,9 @@
   /* == == == Admonitions : barre de 4 px + étiquette en aplat ==
    * Chaque type a sa couleur (--er-adm) : barre à gauche, fond teinté,
    * titre mono posé sur un aplat de la même couleur.
-   *   note → gris · tip → encre · info → bleu · caution/warning → orange
-   *   danger → orange texte
+   *   note → gris · tip → encre · info → encre, étiquette au trait
+   *   caution/warning → orange · danger → orange texte
+   * Pas de bleu : la charte n'autorise qu'un aplat bleu par écran (.er-doc-meta).
    */
   .theme-admonition,
   details.alert {
@@ -359,9 +360,10 @@
     --er-adm: var(--er-muted);
   }
 
+  /* Info (exemples) : barre encre comme tip, mais étiquette au trait (pas d'aplat) */
   .theme-admonition-info {
-    --er-adm: var(--er-blue);
-    --er-adm-on: var(--er-on-blue);
+    --er-adm: var(--er-ink);
+    --er-adm-on: var(--er-ink);
   }
 
   .theme-admonition-caution,
@@ -401,6 +403,11 @@
       height: 1em;
       fill: currentColor;
     }
+  }
+
+  .theme-admonition-info [class*="admonitionHeading"] {
+    background: transparent;
+    box-shadow: inset 0 0 0 1px var(--er-ink);
   }
 
   .theme-admonition [class*="admonitionContent"] > :last-child {
