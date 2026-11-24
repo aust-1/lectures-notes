@@ -3,6 +3,7 @@ import type { Config } from "@docusaurus/types";
 import type { PrismTheme } from "prism-react-renderer";
 import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
+import { loadGitContributors } from "./scripts/git-contributors.mjs";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -65,6 +66,11 @@ const config: Config = {
   title: "Notes de cours",
   tagline: "Notes de cours d'école d'ingénieur, par Eliott Roussille",
   favicon: "img/favicon.ico",
+
+  // Contributeurs de chaque note, calculés une fois au build (pied de page, src/theme/DocItem/Footer)
+  customFields: {
+    gitContributors: loadGitContributors(),
+  },
 
   headTags: [
     {
